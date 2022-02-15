@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+
+<package-spec xmlns="urn:jboss:galleon:package:2.0" name="config.public-rw">
+  <dependencies>
+    <package name="config.public-ro"/>
+    <package name="config.cal-rw"/>
+  </dependencies>
+</package-spec>

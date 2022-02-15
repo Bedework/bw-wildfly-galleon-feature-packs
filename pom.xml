@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.bedework</groupId>
+    <artifactId>bedework-parent</artifactId>
+    <version>14-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.bedework.deploy</groupId>
+  <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
+  <version>4.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Bedework: wildfly galleon feature packs</name>
+  <description>Aggregator project for wildfly galleon feature packs</description>
+  <url>https://github.com/Bedework/bw-wildfly-galleon-feature-packs</url>
+
+  <scm>
+    <connection>scm:git:git@github.com:Bedework/bw-wildfly-galleon-feature-packs.git</connection>
+    <developerConnection>scm:git:git@github.com:Bedework/bw-wildfly-galleon-feature-packs.git</developerConnection>
+    <url>https://github.com/Bedework/bw-wildfly-galleon-feature-packs</url>
+  </scm>
+
+  <modules>
+    <module>bw-wf-calendar-feature-pack</module>
+    <module>bw-wf-carddav-feature-pack</module>
+    <module>bw-wf-category-feature-pack</module>
+    <module>bw-wf-core-feature-pack</module>
+    <module>bw-wf-event-registration-feature-pack</module>
+    <module>bw-wf-feature-pack</module>
+    <module>bw-wf-note-feature-pack</module>
+    <module>bw-wf-self-registration-feature-pack</module>
+    <module>bw-wf-synch-feature-pack</module>
+    <module>bw-wf-timezone-server-feature-pack</module>
+    <module>bw-wf-xml-feature-pack</module>
+  </modules>
+</project>

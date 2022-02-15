@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-demoall-pg">
+    <dependencies>
+        <layer name="bw-demopublic-pg"/>
+        <layer name="bw-democaluser-pg"/>
+    </dependencies>
+</layer-spec>

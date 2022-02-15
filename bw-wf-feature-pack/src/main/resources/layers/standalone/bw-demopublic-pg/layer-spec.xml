@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-demopublic-pg">
+    <dependencies>
+        <layer name="bw-auth-apacheds"/>
+        <layer name="bw-public-pg"/>
+        <layer name="bw-carddav-pg"/>
+        <layer name="bw-eventreg-pg"/>
+        <layer name="bw-cal-eventsubmit-pg"/>
+        <layer name="bw-cal-demosoe-pg"/>
+        <layer name="bw-notify-pg"/>
+        <layer name="bw-qs-bedework"/>
+        <layer name="bw-selfreg-pg"/>
+        <layer name="bw-synch-pg"/>
+    </dependencies>
+
+    <packages>
+        <package name="deploy.opensearch-qs"/>
+        <package name="deploy.qsscripts"/>
+    </packages>
+</layer-spec>

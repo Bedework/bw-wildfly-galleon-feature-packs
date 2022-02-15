@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-cal-user-h2">
+    <dependencies>
+        <layer name="bw-cal-h2"/>
+        <layer name="bw-cal-user"/>
+    </dependencies>
+
+    <packages>
+        <package name="config.cal-h2"/>
+    </packages>
+</layer-spec>

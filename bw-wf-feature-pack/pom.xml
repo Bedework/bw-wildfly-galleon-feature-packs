@@ -1,0 +1,139 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.bedework.deploy</groupId>
+    <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
+    <version>4.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>bw-wf-feature-pack</artifactId>
+  <packaging>pom</packaging>
+
+  <name>Bedework: Wildfly Galleon feature pack</name>
+  <description>Build Wildfly Galleon feature pack</description>
+  <url>https://github.com/Bedework/bw-wf-feature-pack</url>
+
+  <properties>
+    <feature-pack.resources.directory>${project.basedir}/src/main/resources</feature-pack.resources.directory>
+  </properties>
+
+  <scm>
+    <connection>scm:git:git@github.com:Bedework/bw-bw-wf-feature-pack.git</connection>
+    <developerConnection>scm:git:git@github.com:Bedework/bw-wf-feature-pack.git</developerConnection>
+    <url>https://github.com/Bedework/bw-wf-feature-pack</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <dependencies>
+    <!-- Bedework dependencies -->
+    <!-- Feature pack(s) -->
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-calendar-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-carddav-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-category-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-event-registration-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-note-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-self-registration-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-synch-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-opensearch-GeoLite2-City</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-opensearch-qs</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <!-- ================= bw-oschdata ================= -->
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-oschdata</artifactId>
+      <type>zip</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${version.resources.plugin}</version>
+        <executions>
+          <execution>
+            <id>copy-task-properties</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/build-files/</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${basedir}/src/main/task-properties</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.wildfly.galleon-plugins</groupId>
+        <artifactId>wildfly-galleon-maven-plugin</artifactId>
+
+        <executions>
+          <execution>
+            <id>galleon-pack-build</id>
+
+            <configuration>
+              <fork-embedded>false</fork-embedded>
+              <resourcesDir>${project.basedir}/src/main/resources</resourcesDir>
+              <task-properties-file>${project.build.directory}/build-files/task.properties</task-properties-file>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-demoall-h2">
+    <dependencies>
+        <layer name="bw-demopublic-h2"/>
+        <layer name="bw-democaluser-h2"/>
+    </dependencies>
+</layer-spec>

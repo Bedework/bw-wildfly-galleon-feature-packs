@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-democaluser-h2">
+    <dependencies>
+        <layer name="bw-auth-apacheds"/>
+        <layer name="bw-carddav-h2"/>
+        <layer name="bw-cal-user-h2"/>
+        <layer name="bw-notify-h2"/>
+        <layer name="bw-qs-bedework"/>
+    </dependencies>
+
+    <packages>
+        <package name="deploy.opensearch-qs"/>
+        <package name="deploy.qsscripts"/>
+    </packages>
+</layer-spec>

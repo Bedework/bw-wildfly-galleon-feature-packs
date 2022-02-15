@@ -1,0 +1,337 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.bedework.deploy</groupId>
+    <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
+    <version>4.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>bw-wf-calendar-feature-pack</artifactId>
+  <packaging>pom</packaging>
+  <name>Bedework: Wildfly Galleon calendar feature pack</name>
+  <description>Build Wildfly Galleon calendar feature pack</description>
+  <url>https://github.com/Bedework/bw-wf-calendar=feature-pack</url>
+
+  <properties>
+    <resourcesDir>${project.build.directory}/generated/resources</resourcesDir>
+
+    <feature-pack.resources.directory>${project.basedir}/src/main/resources</feature-pack.resources.directory>
+  </properties>
+
+  <dependencies>
+    <!-- Bedework dependencies -->
+    <!-- Feature pack(s) -->
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-xml-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <!-- ============= bw-calendar-client ============= -->
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-admin</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-appcommon</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-rw</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-util</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-web-admin</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-web-rw</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-webcommon</artifactId>
+    </dependency>
+
+    <!-- ================= bw-calendar-deploy ================= -->
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-calendar-notifyws</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-calendar-pubcaldav</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-calendar-publicws</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-calendar-synchws</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-calendar-ucaldav</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-calendar-userws</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-webclient-cal</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-webclient-caladmin</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-webclient-calauth</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-webclient-demosoe</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-webclient-feeder</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-webclient-submit</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-webclient-ucal</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <!-- ============= bw-calendar-data ============= -->
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-calendar-data-h2</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <!-- ================= bw-calendar-xsl ================= -->
+
+    <dependency>
+      <groupId>org.bedework.bwxsl</groupId>
+      <artifactId>bw-calendar-xsl-caladminrsrc</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwxsl</groupId>
+      <artifactId>bw-calendar-xsl-calfeedrsrc-MainCampus</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwxsl</groupId>
+      <artifactId>bw-calendar-xsl-calrsrc-MainCampus</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwxsl</groupId>
+      <artifactId>bw-calendar-xsl-calrsrc-SoEDepartmental</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwxsl</groupId>
+      <artifactId>bw-calendar-xsl-common</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwxsl</groupId>
+      <artifactId>bw-calendar-xsl-eventsubmitrsrc</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwxsl</groupId>
+      <artifactId>bw-calendar-xsl-ucalrsrc</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <!-- ============ bw-cli ============ -->
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-cli</artifactId>
+    </dependency>
+
+    <!-- Third-party dependencies -->
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-feature-pack-layer-package-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${resourcesDir}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${feature-pack.resources.directory}</directory>
+                  <includes>
+                    <include>layers/**</include>
+                    <include>packages/**</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Now create the dodeploy files -->
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>create-dodeploy-resources</id>
+            <phase>process-resources</phase>
+            <configuration>
+              <target>
+                <!--
+                <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.runtime.classpath"/> -->
+
+                <macrodef name="addDodeploy">
+                  <attribute name="package" />
+                  <attribute name="module" />
+                  <sequential>
+                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-calendar-client.version}.war.dodeploy" />
+                  </sequential>
+                </macrodef>
+
+                <sequential>
+                  <addDodeploy package="deploy.webservice.notifyws"
+                               module="bw-calendar-notifyws" />
+                  <addDodeploy package="deploy.webservice.pubcaldav"
+                               module="bw-calendar-pubcaldav" />
+                  <addDodeploy package="deploy.webservice.publicws"
+                               module="bw-calendar-publicws" />
+                  <addDodeploy package="deploy.webservice.synchws"
+                               module="bw-calendar-synchws" />
+                  <addDodeploy package="deploy.webservice.ucaldav"
+                               module="bw-calendar-ucaldav" />
+                  <addDodeploy package="deploy.webservice.userws"
+                               module="bw-calendar-userws" />
+
+                  <addDodeploy package="deploy.calendar-xsl-caladminrsrc"
+                               module="bw-calendar-xsl-caladminrsrc" />
+                  <addDodeploy package="deploy.calendar-xsl-calfeedrsrc.MainCampus"
+                               module="bw-calendar-xsl-calfeedrsrc-MainCampus" />
+                  <addDodeploy package="deploy.calendar-xsl-calrsrc.MainCampus"
+                               module="bw-calendar-xsl-calrsrc-MainCampus" />
+                  <addDodeploy package="deploy.calendar-xsl-calrsrc.SoEDepartmental"
+                               module="bw-calendar-xsl-calrsrc-SoEDepartmental" />
+                  <addDodeploy package="deploy.calendar-xsl-common"
+                               module="bw-calendar-xsl-common" />
+                  <addDodeploy package="deploy.calendar-xsl-eventsubmitrsrc"
+                               module="bw-calendar-xsl-eventsubmitrsrc" />
+                  <addDodeploy package="deploy.calendar-xsl-ucalrsrc"
+                               module="bw-calendar-xsl-ucalrsrc" />
+
+                  <addDodeploy package="deploy.war.cal"
+                               module="bw-webclient-cal" />
+                  <addDodeploy package="deploy.war.caladmin"
+                               module="bw-webclient-caladmin" />
+                  <addDodeploy package="deploy.war.demosoe"
+                               module="bw-webclient-demosoe" />
+                  <addDodeploy package="deploy.war.feeder"
+                               module="bw-webclient-feeder" />
+                  <addDodeploy package="deploy.war.eventsubmit"
+                               module="bw-webclient-submit" />
+                  <addDodeploy package="deploy.war.usercal"
+                               module="bw-webclient-ucal" />
+
+                <!-- ====== not these ======
+                <touch file="${dodeploy}/bw-carddav-ear-5.0.0.ear.dodeploy" />
+                <touch file="${dodeploy}/bw-event-registration-ear-5.0.1.ear.dodeploy" />
+                <touch file="${dodeploy}/bw-note-ear-5.0.0.ear.dodeploy" />
+                <touch file="${dodeploy}/bw-self-registration-ear-5.0.0.ear.dodeploy" />
+                <touch file="${dodeploy}/bw-synch-ear-5.0.0.ear.dodeploy" />
+                <touch file="${dodeploy}/bw-timezone-server-ear-5.0.0.ear.dodeploy" />
+                <touch file="${dodeploy}/bw-xml-ear-5.0.1.ear.dodeploy" />
+                -->
+                </sequential>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.wildfly.galleon-plugins</groupId>
+        <artifactId>wildfly-galleon-maven-plugin</artifactId>
+
+        <executions>
+          <execution>
+            <id>galleon-pack-build</id>
+
+            <configuration>
+              <fork-embedded>false</fork-embedded>
+              <resourcesDir>${resourcesDir}</resourcesDir>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

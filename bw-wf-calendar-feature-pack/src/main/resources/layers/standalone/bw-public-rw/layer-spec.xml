@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-public-rw">
+    <!-- Common features (db independent) for calendar with updates to data -->
+
+    <dependencies>
+        <layer name="bw-common"/>
+        <layer name="bw-tzserver"/>
+        <layer name="bw-public-ro"/>
+        <layer name="bw-logging-rw"/>
+    </dependencies>
+
+    <packages>
+        <!-- Can't load config here - it's db dependent -->
+        <package name="deploy.calendar-xsl-caladminrsrc"/>
+
+        <package name="deploy.war.caladmin"/>
+        <package name="deploy.webservice.notifyws"/>
+        <package name="deploy.webservice.synchws"/>
+        <package name="deploy.webservice.ucaldav"/>
+        <package name="deploy.webservice.userws"/>
+        <package name="deploy.xml"/>
+    </packages>
+</layer-spec>

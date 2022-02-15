@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-cal-user-pg">
+    <dependencies>
+        <layer name="bw-cal-pg"/>
+        <layer name="bw-cal-user"/>
+    </dependencies>
+
+    <packages>
+        <package name="config.cal-pg"/>
+    </packages>
+</layer-spec>
