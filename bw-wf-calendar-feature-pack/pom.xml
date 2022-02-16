@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bedework.deploy</groupId>
     <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
-    <version>4.0.2-SNAPSHOT</version>
+    <version>4.0.2</version>
   </parent>
 
   <artifactId>bw-wf-calendar-feature-pack</artifactId>
@@ -252,7 +252,16 @@
                   <attribute name="module" />
                   <sequential>
                     <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
-                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-calendar-client.version}.war.dodeploy" />
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-calendar-deploy.version}.war.dodeploy" />
+                  </sequential>
+                </macrodef>
+
+                <macrodef name="addDodeployXSL">
+                  <attribute name="package" />
+                  <attribute name="module" />
+                  <sequential>
+                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-calendar-xsl.version}.war.dodeploy" />
                   </sequential>
                 </macrodef>
 
@@ -270,21 +279,6 @@
                   <addDodeploy package="deploy.webservice.userws"
                                module="bw-calendar-userws" />
 
-                  <addDodeploy package="deploy.calendar-xsl-caladminrsrc"
-                               module="bw-calendar-xsl-caladminrsrc" />
-                  <addDodeploy package="deploy.calendar-xsl-calfeedrsrc.MainCampus"
-                               module="bw-calendar-xsl-calfeedrsrc-MainCampus" />
-                  <addDodeploy package="deploy.calendar-xsl-calrsrc.MainCampus"
-                               module="bw-calendar-xsl-calrsrc-MainCampus" />
-                  <addDodeploy package="deploy.calendar-xsl-calrsrc.SoEDepartmental"
-                               module="bw-calendar-xsl-calrsrc-SoEDepartmental" />
-                  <addDodeploy package="deploy.calendar-xsl-common"
-                               module="bw-calendar-xsl-common" />
-                  <addDodeploy package="deploy.calendar-xsl-eventsubmitrsrc"
-                               module="bw-calendar-xsl-eventsubmitrsrc" />
-                  <addDodeploy package="deploy.calendar-xsl-ucalrsrc"
-                               module="bw-calendar-xsl-ucalrsrc" />
-
                   <addDodeploy package="deploy.war.cal"
                                module="bw-webclient-cal" />
                   <addDodeploy package="deploy.war.caladmin"
@@ -297,6 +291,21 @@
                                module="bw-webclient-submit" />
                   <addDodeploy package="deploy.war.usercal"
                                module="bw-webclient-ucal" />
+
+                  <addDodeployXSL package="deploy.calendar-xsl-caladminrsrc"
+                                  module="bw-calendar-xsl-caladminrsrc" />
+                  <addDodeployXSL package="deploy.calendar-xsl-calfeedrsrc.MainCampus"
+                                  module="bw-calendar-xsl-calfeedrsrc-MainCampus" />
+                  <addDodeployXSL package="deploy.calendar-xsl-calrsrc.MainCampus"
+                                  module="bw-calendar-xsl-calrsrc-MainCampus" />
+                  <addDodeployXSL package="deploy.calendar-xsl-calrsrc.SoEDepartmental"
+                                  module="bw-calendar-xsl-calrsrc-SoEDepartmental" />
+                  <addDodeployXSL package="deploy.calendar-xsl-common"
+                                  module="bw-calendar-xsl-common" />
+                  <addDodeployXSL package="deploy.calendar-xsl-eventsubmitrsrc"
+                                  module="bw-calendar-xsl-eventsubmitrsrc" />
+                  <addDodeployXSL package="deploy.calendar-xsl-ucalrsrc"
+                                  module="bw-calendar-xsl-ucalrsrc" />
 
                 <!-- ====== not these ======
                 <touch file="${dodeploy}/bw-carddav-ear-5.0.0.ear.dodeploy" />
