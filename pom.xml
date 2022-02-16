@@ -4,12 +4,12 @@
   <parent>
     <groupId>org.bedework</groupId>
     <artifactId>bedework-parent</artifactId>
-    <version>16</version>
+    <version>17</version>
   </parent>
 
   <groupId>org.bedework.deploy</groupId>
   <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
-  <version>4.0.1-SNAPSHOT</version>
+  <version>4.0.1</version>
   <packaging>pom</packaging>
 
   <name>Bedework: wildfly galleon feature packs</name>
