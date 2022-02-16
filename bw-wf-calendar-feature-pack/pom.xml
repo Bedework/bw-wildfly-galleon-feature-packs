@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bedework.deploy</groupId>
     <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
-    <version>4.0.1</version>
+    <version>4.0.2-SNAPSHOT</version>
   </parent>
 
   <artifactId>bw-wf-calendar-feature-pack</artifactId>
