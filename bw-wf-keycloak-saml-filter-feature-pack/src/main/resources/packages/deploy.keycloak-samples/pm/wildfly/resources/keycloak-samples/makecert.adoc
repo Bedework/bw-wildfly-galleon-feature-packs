@@ -1,0 +1,23 @@
+= Creating a self signed cert.,
+
+== Client (SP) certs
+These may be stored in a keystore defined in the SP/Keys section of keycloak-saml.xml.
+
+Alternatively they can be pasted directly into that section as a Key element.
+
+== Creating keys
+First determine the common name CN for the certificate. This will be the host name or the IP address of the service.
+
+Enter the following commadn and answer the questions.
+
+....
+openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+....
+
+Combine the 2 files into a single PEM bundle - private key first
+
+....
+cat key.pem > server.pem
+cat cert.pem >> server.pem
+....
+

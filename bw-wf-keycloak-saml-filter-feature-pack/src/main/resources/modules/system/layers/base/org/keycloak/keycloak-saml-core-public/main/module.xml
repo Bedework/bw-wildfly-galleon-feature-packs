@@ -32,6 +32,7 @@
             </imports>
         </module>
         <module name="org.apache.httpcomponents"/>
+        <module name="wildflyee.api"/>
     </dependencies>
 
 </module>
