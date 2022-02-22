@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bedework</groupId>
     <artifactId>bedework-parent</artifactId>
-    <version>18</version>
+    <version>20-SNAPSHOT</version>
   </parent>
 
   <groupId>org.bedework.deploy</groupId>
@@ -34,5 +34,6 @@
     <module>bw-wf-synch-feature-pack</module>
     <module>bw-wf-timezone-server-feature-pack</module>
     <module>bw-wf-xml-feature-pack</module>
+    <module>bw-wf-keycloak-saml-filter-feature-pack</module>
   </modules>
 </project>
