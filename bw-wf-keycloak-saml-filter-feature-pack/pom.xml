@@ -18,12 +18,6 @@
     <!-- Feature pack(s) -->
 
     <dependency>
-      <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-wf-core-feature-pack</artifactId>
-      <type>zip</type>
-    </dependency>
-
-    <dependency>
       <groupId>org.wildfly</groupId>
       <artifactId>wildfly-ee-galleon-pack</artifactId>
       <type>zip</type>
