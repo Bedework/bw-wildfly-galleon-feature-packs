@@ -58,6 +58,12 @@
             <packages inherit="true"/>
         </dependency>
 
+        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-cas-filter-feature-pack">
+            <name>org.bedework.deploy:bw-wf-cas-filter-feature-pack</name>
+            <default-configs inherit="false"/>
+            <packages inherit="true"/>
+        </dependency>
+
         <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-keycloak-saml-filter-feature-pack">
             <name>org.bedework.deploy:bw-wf-keycloak-saml-filter-feature-pack</name>
             <default-configs inherit="false"/>

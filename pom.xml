@@ -35,5 +35,6 @@
     <module>bw-wf-timezone-server-feature-pack</module>
     <module>bw-wf-xml-feature-pack</module>
     <module>bw-wf-keycloak-saml-filter-feature-pack</module>
+    <module>bw-wf-cas-filter-feature-pack</module>
   </modules>
 </project>
