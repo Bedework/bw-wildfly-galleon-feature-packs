@@ -202,11 +202,11 @@
     <orderEntry type="module" module-name="bw-util-hibernate" />
     <orderEntry type="module" module-name="bw-util-opensearch" />
     <orderEntry type="module" module-name="bw-util-indexing" />
-    <orderEntry type="module" module-name="bw-util-config-http" />
-    <orderEntry type="module" module-name="bw-util-dav" />
-    <orderEntry type="module" module-name="bw-util-http" />
-    <orderEntry type="module" module-name="bw-util-servlet" />
-    <orderEntry type="module" module-name="bw-util-servlet-filters" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-config-http:5.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-dav:5.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-http:5.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-servlet:5.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-servlet-filters:5.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-util-security" />
     <orderEntry type="module" module-name="bw-util-tz" />
     <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.6.2" level="project" />

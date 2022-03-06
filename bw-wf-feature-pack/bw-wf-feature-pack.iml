@@ -149,8 +149,8 @@
     <orderEntry type="module" module-name="bw-util-maven-deploy-wfmodule" />
     <orderEntry type="module" module-name="bw-util-hibernate" />
     <orderEntry type="module" module-name="bw-util-opensearch" />
-    <orderEntry type="module" module-name="bw-util-config-http" />
-    <orderEntry type="module" module-name="bw-util-dav" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-config-http:5.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-dav:5.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-util-security" />
     <orderEntry type="module" module-name="bw-util2-vcard" />
     <orderEntry type="module" module-name="bw-webdav" />
@@ -167,9 +167,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.directory.server:apacheds-service:2.0.0.AM26" level="project" />
     <orderEntry type="library" name="Maven: org.bedework:bw-ical4j-vcard:1.0.8" level="project" />
-    <orderEntry type="library" name="Maven: org.jasig.cas.client:cas-client-core:3.6.4" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-core:2.3.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jaxb:txw2:2.3.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.bedework:hibernate-core:5.2.5.1FinalBwPatched" level="project" />
@@ -280,8 +277,8 @@
     <orderEntry type="library" name="Maven: org.dom4j:dom4j:2.1.3" level="project" />
     <orderEntry type="module" module-name="bw-calendar-client-util" />
     <orderEntry type="module" module-name="bw-util-logging" />
-    <orderEntry type="module" module-name="bw-util-servlet" />
-    <orderEntry type="module" module-name="bw-util-servlet-filters" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-servlet:5.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-servlet-filters:5.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-calendar-client-web-admin" />
     <orderEntry type="module" module-name="bw-calendar-client-web-rw" />
     <orderEntry type="module" module-name="bw-calendar-client-webcommon" />
@@ -312,19 +309,27 @@
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="module" module-name="bw-util-jolokia" />
     <orderEntry type="module" module-name="bw-util-args" />
-    <orderEntry type="module" module-name="bw-util-http" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-util-http:5.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-util-xml" />
     <orderEntry type="module" module-name="bw-logs" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.13" level="project" />
-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.15" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.14" level="project" />
     <orderEntry type="module" module-name="bw-carddav-ear" />
+    <orderEntry type="library" name="Maven: org.jasig.cas.client:cas-client-core:3.6.4" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.15" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.70" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcutil-jdk15on:1.70" level="project" />
+    <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-core:2.3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.jaxb:txw2:2.3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.istack:istack-commons-runtime:3.0.5" level="project" />
     <orderEntry type="module" module-name="bw-category-ear" />
     <orderEntry type="module" module-name="bw-event-registration-ear" />
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-adapter-spi:17.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-common:17.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.68" level="project" />
-    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.68" level="project" />
     <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-saml-servlet-filter-adapter:17.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
@@ -333,17 +338,13 @@
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-saml-core:17.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-saml-core-public:17.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.santuario:xmlsec:2.2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.6" level="project" />
     <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
     <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
-    <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
-    <orderEntry type="library" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.ws:rt:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.ws:policy:2.7.5" level="project" />
     <orderEntry type="library" name="Maven: com.sun.activation:javax.activation:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.1" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.istack:istack-commons-runtime:3.0.7" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.gmbal:gmbal-api-only:3.1.0-b001" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.external:management-api:3.0.0-b012" level="project" />
