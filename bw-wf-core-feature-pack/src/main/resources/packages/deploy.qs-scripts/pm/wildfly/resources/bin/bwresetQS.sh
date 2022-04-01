@@ -2,54 +2,62 @@
 
 # Reset a bedework quickstart to its initial state - for testing
 
-BASE_DIR=`pwd`
-scriptName="$0"
-restart=
+DIRNAME=`dirname "$0"`
 
-trap 'cd $BASE_DIR' 0
-trap "exit 2" 1 2 3 15
+# OS specific support (must be 'true' or 'false').
+cygwin=false;
+darwin=false;
+case "`uname`" in
+    CYGWIN*)
+        cygwin=true
+        ;;
 
-bwOptions=$HOME/.bw
+    Darwin*)
+        darwin=true
+        ;;
+esac
 
-if [ -f "$bwOptions" ]; then
-  . "$bwOptions"
+# For Cygwin, ensure paths are in UNIX format before anything is touched
+if $cygwin ; then
+    [ -n "$JBOSS_HOME" ] &&
+        JBOSS_HOME=`cygpath --unix "$JBOSS_HOME"`
 fi
 
-if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
-  echo "JAVA_HOME is not defined correctly for bedework."
-  exit 1
+# Setup JBOSS_HOME
+RESOLVED_JBOSS_HOME=`cd "$DIRNAME/.."; pwd`
+if [ "x$JBOSS_HOME" = "x" ]; then
+    # get the full path (without any relative bits)
+    JBOSS_HOME=$RESOLVED_JBOSS_HOME
+else
+ SANITIZED_JBOSS_HOME=`cd "$JBOSS_HOME"; pwd`
+ if [ "$RESOLVED_JBOSS_HOME" != "$SANITIZED_JBOSS_HOME" ]; then
+   echo "WARNING JBOSS_HOME may be pointing to a different installation - unpredictable results may occur."
+   echo ""
+ fi
 fi
 
-# Figure out where java is for version checks
-if [ "x$JAVA" = "x" ]; then
-    if [ "x$JAVA_HOME" != "x" ]; then
-	JAVA="$JAVA_HOME/bin/java"
-    else
-	JAVA="java"
-    fi
-fi
+export JBOSS_HOME
 
-# Check our java version
-version=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
-if [[ "$version" -lt "11" ]]; then
-  echo "Java 11 or greater is required for bedework"
-  exit 1
-fi
+# This should be quickstart
+BASE_DIR=`cd "$JBOSS_HOME/.."; pwd`
 
-JBOSS_VERSION="wildfly"
-
-if [ ! -d "$JBOSS_VERSION" ]; then
-  echo "Not located in the quickstart"
-  exit 1
-fi
-
-resources=$BASE_DIR/bedework/build/quickstart
+h2calresources=$BASE_DIR/bw-quickstart/bw-calendar-data-h2/src/main/resources
+h2cardresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-carddav-feature-pack/src/main/resources/packages/data.carddav-h2/pm/wildfly/resources/h2
+h2evregresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-event-registration-feature-pack/src/main/resources/packages/data.eventreg-h2/pm/wildfly/resources/h2
+h2noteresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-note-feature-pack/src/main/resources/packages/data.notify-h2/pm/wildfly/resources/h2
+h2selfregresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-self-registration-feature-pack/src/main/resources/packages/data.selfreg-h2/pm/wildfly/resources/h2
+h2synchresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-synch-feature-pack/src/main/resources/packages/data.synch-h2/pm/wildfly/resources/h2
 
 JBOSS_CONFIG="standalone"
-JBOSS_SERVER_DIR="$BASE_DIR/$JBOSS_VERSION/$JBOSS_CONFIG"
+JBOSS_BIN=$JBOSS_HOME/bin
+JBOSS_SERVER_DIR="$JBOSS_HOME/$JBOSS_CONFIG"
 JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
 bedework_data_dir="$JBOSS_DATA_DIR/bedework"
-osch_data_dir="$bwOschdatadir"
+
+if [ "x$bwOSCHdatadir" = "x" ]; then
+    # get the full path (without any relative bits)
+    bwOSCHdatadir=$JBOSS_HOME/opensearch/data
+fi
 
 TMP_DIR="$JBOSS_SERVER_DIR/tmp"
 
@@ -62,13 +70,13 @@ fi
 # Ensure nothing running
 
 echo -n "Shutting down h2:  "
-./stoph2
+$JBOSS_BIN/bwstoph2.sh
 
 echo -n "Shutting down apacheds:  "
-./dirstop
+$JBOSS_BIN/bwdirstop.sh
 
-echo -n "Shutting down open search:  "
-./stopOSCH
+echo -n "Shutting down opensearch:  "
+$JBOSS_BIN/bwstoposchqs.sh
 
 # -------------------------------------------------------------------
 # Each step is a function
@@ -83,50 +91,25 @@ installData() {
 
   # ------------------------------------- h2 data
 
-  cd $BASE_DIR
+  rm -rf $bedework_data_dir/h2/*
 
-  cd $TMP_DIR/
+  cp -r $h2calresources/* $bedework_data_dir/h2/
+  cp -r $h2cardresources/* $bedework_data_dir/h2/
+  cp -r $h2evregresources/* $bedework_data_dir/h2/
+  cp -r $h2noteresources/* $bedework_data_dir/h2/
+  cp -r $h2selfregresources/* $bedework_data_dir/h2/
+  cp -r $h2synchresources/* $bedework_data_dir/h2/
 
-  rm -f h2.zip
+  # ------------------------------------- opensearch data
 
-  cp $resources/data/h2.zip .
-
-  rm -rf h2/
-
-  unzip h2.zip
-
-  rm -f h2.zip
-
-  rm -rf $bedework_data_dir/h2
-
-  cp -r h2 $bedework_data_dir/
-  rm -rf h2/
-
-  cd $BASE_DIR
-
-  # ------------------------------------- Opensearch data
-
-  cd $TMP_DIR/
-  rm opensearch.zip
-  rm -rf nodes
-  cp $resources/data/opensearch.zip .
-
-  unzip opensearch.zip
-
-  rm opensearch.zip
-
-  rm -rf $osch_data_dir
-  mkdir $osch_data_dir
-  cp -r nodes $osch_data_dir/
+  rm -rf $bwOSCHdatadir
+  mkdir $bwOSCHdatadir
+  cp -r $BASE_DIR/bw-quickstart/bw-opensearch-qs/src/main/resources/opensearch-1.2.4/data/nodes $bwOSCHdatadir/
 
   # ------------------------------------- directory data
 
-  cd $BASE_DIR
-
-  rm -rf apacheds-1.5.3-fixed
-  cp $resources/data/apacheds.zip .
-  unzip apacheds.zip
-  rm apacheds.zip
+  rm -rf $JBOSS_HOME/apacheds/instances/default/partitions
+  cp -r $BASE_DIR/bw-quickstart/bw-apacheds/src/main/resources/apacheds/instances/default/partitions   $JBOSS_HOME/apacheds/instances/default/partitions
 }
 
 installData

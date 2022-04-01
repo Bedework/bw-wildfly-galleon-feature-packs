@@ -7,5 +7,6 @@
 
     <packages>
         <package name="deploy.qs-bedework"/>
+        <package name="deploy.qs-scripts"/>
     </packages>
 </layer-spec>
