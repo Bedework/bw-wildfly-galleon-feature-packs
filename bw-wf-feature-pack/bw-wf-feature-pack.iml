@@ -49,18 +49,18 @@
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.8.0" level="project" />
     <orderEntry type="module" module-name="bw-caldav-server" />
     <orderEntry type="module" module-name="bw-caldav-util" />
-    <orderEntry type="module" module-name="bw-calendar-annotations" />
-    <orderEntry type="module" module-name="bw-calendar-api-ro" />
-    <orderEntry type="module" module-name="bw-calendar-config" />
-    <orderEntry type="module" module-name="bw-calendar-mail" />
-    <orderEntry type="module" module-name="bw-calendar-sysevents-common" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-annotations:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-api-ro:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-config:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-mail:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-sysevents-common:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: javax.jms:javax.jms-api:2.0" level="project" />
-    <orderEntry type="module" module-name="bw-calendar-engine-api" />
-    <orderEntry type="module" module-name="bw-calendar-engine-caldav" />
-    <orderEntry type="module" module-name="bw-calendar-engine-chgnote" />
-    <orderEntry type="module" module-name="bw-calendar-engine-core" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-api:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-caldav:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-chgnote:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-core:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.2.5.Final" level="project" />
-    <orderEntry type="module" module-name="bw-calendar-engine-core-common" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-core-common:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.opensearch:opensearch:1.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.opensearch:opensearch-core:1.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.opensearch:opensearch-secure-sm:1.2.4" level="project" />
@@ -97,13 +97,13 @@
     <orderEntry type="library" name="Maven: org.opensearch.plugin:rank-eval-client:1.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.opensearch.plugin:lang-mustache-client:1.2.4" level="project" />
     <orderEntry type="library" name="Maven: com.github.spullara.mustache.java:compiler:0.9.6" level="project" />
-    <orderEntry type="module" module-name="bw-calendar-engine-dumprestore" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-dumprestore:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: commons-digester:commons-digester:1.8" level="project" />
-    <orderEntry type="module" module-name="bw-calendar-engine-impl" />
-    <orderEntry type="module" module-name="bw-calendar-engine-indexer" />
-    <orderEntry type="module" module-name="bw-calendar-engine-inoutsched" />
-    <orderEntry type="module" module-name="bw-calendar-engine-interfaces" />
-    <orderEntry type="module" module-name="bw-calendar-engine-tools" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-impl:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-indexer:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-inoutsched:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-interfaces:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.caleng:bw-calendar-engine-tools:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-csv:1.2" level="project" />
     <orderEntry type="module" module-name="bw-carddav-common" />
     <orderEntry type="module" module-name="bw-carddav-server" />
@@ -243,10 +243,10 @@
     <orderEntry type="module" module-name="bw-xml-bwlicense" />
     <orderEntry type="module" module-name="bw-xml-synchws" />
     <orderEntry type="module" module-name="bw-xml-tzsvr" />
-    <orderEntry type="module" module-name="bw-calendar-client-admin" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-admin:4.0.3-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-util-config" />
     <orderEntry type="module" module-name="bw-util-jmx" />
-    <orderEntry type="module" module-name="bw-calendar-client-appcommon" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-appcommon:4.0.3-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-util-indexing" />
     <orderEntry type="module" module-name="bw-util-misc" />
     <orderEntry type="module" module-name="bw-util-tz" />
@@ -255,27 +255,27 @@
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="module" module-name="bw-access" />
     <orderEntry type="module" module-name="bw-util2-calendar" />
-    <orderEntry type="module" module-name="bw-calendar-api" />
-    <orderEntry type="module" module-name="bw-calendar-convert" />
-    <orderEntry type="module" module-name="bw-calendar-facade" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-api:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-convert:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-facade:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.26" level="project" />
-    <orderEntry type="module" module-name="bw-calendar-sysevents-msgs" />
+    <orderEntry type="library" name="Maven: org.bedework:bw-calendar-sysevents-msgs:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-text:1.7" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.0" level="project" />
     <orderEntry type="library" name="Maven: org.imgscalr:imgscalr-lib:4.2" level="project" />
-    <orderEntry type="module" module-name="bw-calendar-client-rw" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-rw:4.0.3-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.dom4j:dom4j:2.1.3" level="project" />
-    <orderEntry type="module" module-name="bw-calendar-client-util" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-util:4.0.3-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-util-logging" />
     <orderEntry type="module" module-name="bw-util-servlet" />
     <orderEntry type="module" module-name="bw-util-servlet-filters" />
-    <orderEntry type="module" module-name="bw-calendar-client-web-admin" />
-    <orderEntry type="module" module-name="bw-calendar-client-web-rw" />
-    <orderEntry type="module" module-name="bw-calendar-client-webcommon" />
-    <orderEntry type="module" module-name="bw-calendar-client-struts" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-web-admin:4.0.3-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-web-rw:4.0.3-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-webcommon:4.0.3-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwwebcl:bw-calendar-client-struts:4.0.3-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.apache.struts:struts-core:1.3.10" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.4" level="project" />
     <orderEntry type="library" name="Maven: commons-chain:commons-chain:1.2" level="project" />
@@ -284,26 +284,26 @@
     <orderEntry type="module" module-name="struts-taglib" />
     <orderEntry type="module" module-name="bw-util-caching" />
     <orderEntry type="module" module-name="bw-util-json" />
-    <orderEntry type="module" module-name="bw-calendar-notifyws" />
-    <orderEntry type="module" module-name="bw-calendar-pubcaldav" />
-    <orderEntry type="module" module-name="bw-calendar-publicws" />
-    <orderEntry type="module" module-name="bw-calendar-synchws" />
-    <orderEntry type="module" module-name="bw-calendar-ucaldav" />
-    <orderEntry type="module" module-name="bw-calendar-userws" />
-    <orderEntry type="module" module-name="bw-webclient-cal" />
-    <orderEntry type="module" module-name="bw-webclient-caladmin" />
-    <orderEntry type="module" module-name="bw-webclient-calauth" />
-    <orderEntry type="module" module-name="bw-webclient-demosoe" />
-    <orderEntry type="module" module-name="bw-webclient-feeder" />
-    <orderEntry type="module" module-name="bw-webclient-submit" />
-    <orderEntry type="module" module-name="bw-webclient-ucal" />
-    <orderEntry type="module" module-name="bw-calendar-xsl-caladminrsrc" />
-    <orderEntry type="module" module-name="bw-calendar-xsl-calfeedrsrc-MainCampus" />
-    <orderEntry type="module" module-name="bw-calendar-xsl-calrsrc-MainCampus" />
-    <orderEntry type="module" module-name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
-    <orderEntry type="module" module-name="bw-calendar-xsl-common" />
-    <orderEntry type="module" module-name="bw-calendar-xsl-eventsubmitrsrc" />
-    <orderEntry type="module" module-name="bw-calendar-xsl-ucalrsrc" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-calendar-notifyws:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-calendar-pubcaldav:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-calendar-publicws:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-calendar-synchws:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-calendar-ucaldav:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-calendar-userws:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-webclient-cal:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-webclient-caladmin:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-webclient-calauth:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-webclient-demosoe:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-webclient-feeder:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-webclient-submit:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.deploy:bw-webclient-ucal:war:4.0.2-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwxsl:bw-calendar-xsl-caladminrsrc:war:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwxsl:bw-calendar-xsl-calfeedrsrc-MainCampus:war:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwxsl:bw-calendar-xsl-calrsrc-MainCampus:war:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwxsl:bw-calendar-xsl-calrsrc-SoEDepartmental:war:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwxsl:bw-calendar-xsl-common:war:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwxsl:bw-calendar-xsl-eventsubmitrsrc:war:4.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.bedework.bwxsl:bw-calendar-xsl-ucalrsrc:war:4.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-cli" />
     <orderEntry type="module" module-name="bw-util-cli" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
