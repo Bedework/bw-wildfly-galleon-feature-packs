@@ -177,6 +177,11 @@
     </feature>
 
     <feature spec="subsystem.logging.logger">
+        <param name="logger" value="com.opensymphony.xwork2"/>
+        <param name="level" value="INFO"/>
+    </feature>
+
+    <feature spec="subsystem.logging.logger">
         <param name="logger" value="org.apache.struts"/>
         <param name="level" value="INFO"/>
     </feature>
