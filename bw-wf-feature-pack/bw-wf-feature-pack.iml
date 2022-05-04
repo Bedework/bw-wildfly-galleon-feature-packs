@@ -245,7 +245,7 @@
     <orderEntry type="module" module-name="bw-xml-tzsvr" />
     <orderEntry type="module" module-name="bw-calendar-client-admin" />
     <orderEntry type="module" module-name="bw-calendar-facade" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.2" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.26" level="project" />
     <orderEntry type="module" module-name="bw-util-config" />
     <orderEntry type="module" module-name="bw-util-jmx" />
@@ -262,9 +262,9 @@
     <orderEntry type="module" module-name="bw-calendar-convert" />
     <orderEntry type="module" module-name="bw-calendar-sysevents-msgs" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-text:1.8" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.2" level="project" />
     <orderEntry type="library" name="Maven: org.imgscalr:imgscalr-lib:4.2" level="project" />
     <orderEntry type="module" module-name="bw-calendar-client-rw" />
     <orderEntry type="library" name="Maven: org.dom4j:dom4j:2.1.3" level="project" />
@@ -357,8 +357,8 @@
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-saml-adapter-api-public:17.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-saml-adapter-core:17.0.0" level="project" />
     <orderEntry type="module" module-name="bw-timezone-server-ear" />
-    <orderEntry type="module" module-name="bw-note-ear" />
+    <orderEntry type="library" name="Maven: org.bedework.notifier:bw-note-ear:ear:5.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="bw-self-registration-ear" />
-    <orderEntry type="module" module-name="bw-synch-ear" />
+    <orderEntry type="library" name="Maven: org.bedework.bw-synch:bw-synch-ear:ear:5.0.1-SNAPSHOT" level="project" />
   </component>
 </module>
