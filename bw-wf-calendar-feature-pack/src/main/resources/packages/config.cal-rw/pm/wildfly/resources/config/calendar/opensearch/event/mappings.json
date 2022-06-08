@@ -507,6 +507,9 @@
                     "dir": {
                       "type": "keyword"
                     },
+                    "email": {
+                      "type": "keyword"
+                    },
                     "lang": {
                       "type": "keyword"
                     },
@@ -556,6 +559,9 @@
                   "type": "keyword"
                 },
                 "dir": {
+                  "type": "keyword"
+                },
+                "email": {
                   "type": "keyword"
                 },
                 "lang": {
