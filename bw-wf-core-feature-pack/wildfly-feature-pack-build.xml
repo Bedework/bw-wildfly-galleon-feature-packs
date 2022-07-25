@@ -22,7 +22,9 @@
             <packages inherit="false"/>
         </dependency>
     </dependencies>
+
     <config name="standalone.xml" model="standalone"/>
+    <config name="domain.xml" model="domain"/>
     <generate-feature-specs>
     </generate-feature-specs>
 </build>

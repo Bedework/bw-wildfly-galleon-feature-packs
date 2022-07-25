@@ -205,7 +205,27 @@
       <artifactId>bw-cli</artifactId>
     </dependency>
 
+    <!-- ============ wildfly extensions ============ -->
+
+    <dependency>
+      <groupId>org.bedework.wfextensions</groupId>
+      <artifactId>bw-wf-calendar-subsystem</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.wildfly.galleon-plugins</groupId>
+      <artifactId>wildfly-galleon-plugins</artifactId>
+      <version>${version.org.wildfly.galleon-plugins}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jboss.galleon</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
     <!-- Third-party dependencies -->
+
   </dependencies>
 
   <build>
@@ -327,12 +347,30 @@
       </plugin>
 
       <plugin>
+        <dependencies>
+          <dependency>
+            <groupId>org.wildfly.core</groupId>
+            <artifactId>wildfly-embedded</artifactId>
+            <version>${wildfly.core.version}</version>
+          </dependency>
+
+          <dependency>
+            <groupId>org.wildfly.common</groupId>
+            <artifactId>wildfly-common</artifactId>
+            <version>${wildfly.common.version}</version>
+          </dependency>
+        </dependencies>
+
         <groupId>org.wildfly.galleon-plugins</groupId>
         <artifactId>wildfly-galleon-maven-plugin</artifactId>
 
         <executions>
           <execution>
             <id>galleon-pack-build</id>
+            <goals>
+              <goal>build-feature-pack</goal>
+            </goals>
+            <phase>prepare-package</phase>
 
             <configuration>
               <fork-embedded>false</fork-embedded>

@@ -13,6 +13,7 @@
         <package name="deploy.bedework-content"/>
         <package name="deploy.cli"/>
         <package name="deploy.scripts"/>
+        <package name="deploy.hawtio.war"/>
         <package name="deploy.jolokia.war"/>
     </packages>
 
@@ -483,7 +484,7 @@
         <param name="directory-listing" value="true"/>
     </feature>
 
-    <!-- BASIC auth for jolokia -->
+    <!-- BASIC auth for jolokia and hawtio -->
     <feature spec="subsystem.elytron.http-authentication-factory">
         <param name="http-authentication-factory" value="management-http-authentication"/>
         <param name="mechanism-configurations" value="[{mechanism-name=DIGEST,mechanism-realm-configurations=[{realm-name=ManagementRealm}]},{mechanism-name=BASIC,mechanism-realm-configurations=[{realm-name=ManagementRealm}]}]"/>

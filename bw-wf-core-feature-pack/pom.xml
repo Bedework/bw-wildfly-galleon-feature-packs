@@ -102,6 +102,16 @@
 
     <dependency>
       <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-taglib</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
+      <artifactId>bw-calendar-client-struts2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwwebcl</groupId>
       <artifactId>bw-calendar-client-util</artifactId>
     </dependency>
 
@@ -363,6 +373,14 @@
       <type>ear</type>
     </dependency>
 
+    <!-- ================= bw-hawtio ================= -->
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-hawtio</artifactId>
+      <type>war</type>
+    </dependency>
+
     <!-- ================= bw-jsforj ================= -->
 
     <dependency>
@@ -606,11 +624,30 @@
       <artifactId>bw-util2-vcard</artifactId>
     </dependency>
 
+    <!-- ================= bw-webcache ================= -->
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-webcache-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-webcache-web</artifactId>
+    </dependency>
+
     <!-- ================= bw-webdav ================= -->
 
     <dependency>
       <groupId>org.bedework</groupId>
       <artifactId>bw-webdav</artifactId>
+    </dependency>
+
+    <!-- ============ wildfly extensions ============ -->
+
+    <dependency>
+      <groupId>org.bedework.wfextensions</groupId>
+      <artifactId>bw-wf-calendar-subsystem</artifactId>
     </dependency>
 
     <!-- Bedework: XML -->
@@ -680,6 +717,52 @@
     <dependency>
       <groupId>org.bedework</groupId>
       <artifactId>bw-ical4j-vcard</artifactId>
+    </dependency>
+
+    <!-- hawtio -->
+    <dependency>
+      <groupId>org.checkerframework</groupId>
+      <artifactId>checker-qual</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.errorprone</groupId>
+      <artifactId>error_prone_annotations</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.code.findbugs</groupId>
+      <artifactId>jsr305</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.j2objc</groupId>
+      <artifactId>j2objc-annotations</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.hawt</groupId>
+      <artifactId>hawtio-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.hawt</groupId>
+      <artifactId>hawtio-system</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.hawt</groupId>
+      <artifactId>hawtio-util</artifactId>
     </dependency>
 
     <!-- Third-party dependencies -->
@@ -961,35 +1044,19 @@
             <phase>process-resources</phase>
             <configuration>
               <target>
-                <property name="dodeploy" value="${resourcesDir}/content/dodeploy" />
-                <mkdir dir="${dodeploy}" />
+                <macrodef name="addDodeploy">
+                  <attribute name="package" />
+                  <attribute name="module" />
+                  <sequential>
+                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-calendar-deploy.version}.war.dodeploy" />
+                  </sequential>
+                </macrodef>
 
-                <touch file="${dodeploy}/bw-calendar-notifyws-4.0.0.war.dodeploy" />
-                <touch file="${dodeploy}/bw-calendar-pubcaldav-4.0.0.war.dodeploy" />
-                <touch file="${dodeploy}/bw-calendar-publicws-4.0.0.war.dodeploy" />
-                    <touch file="${dodeploy}/bw-calendar-synchws-4.0.0.war.dodeploy" />
-                <touch file="${dodeploy}/bw-calendar-ucaldav-4.0.0.war.dodeploy" />
-                   <touch file="${dodeploy}/bw-calendar-userws-4.0.0.war.dodeploy" />
-                 <touch file="${dodeploy}/bw-calendar-xsl-caladminrsrc-4.0.0.war.dodeploy" />
-                 <touch file="${dodeploy}/bw-calendar-xsl-calfeedrsrc-MainCampus-4.0.0.war.dodeploy" />
-                 <touch file="${dodeploy}/bw-calendar-xsl-calrsrc-MainCampus-4.0.0.war.dodeploy" />
-                  <touch file="${dodeploy}/bw-calendar-xsl-calrsrc-SoEDepartmental-4.0.0.war.dodeploy" />
-                 <touch file="${dodeploy}/bw-calendar-xsl-common-4.0.0.war.dodeploy" />
-                 <touch file="${dodeploy}/bw-calendar-xsl-eventsubmitrsrc-4.0.0.war.dodeploy" />
-                 <touch file="${dodeploy}/bw-calendar-xsl-ucalrsrc-4.0.0.war.dodeploy" />
-                  <touch file="${dodeploy}/bw-carddav-ear-5.0.0.ear.dodeploy" />
-                  <touch file="${dodeploy}/bw-event-registration-ear-5.0.1.ear.dodeploy" />
-                   <touch file="${dodeploy}/bw-note-ear-5.0.0.ear.dodeploy" />
-                  <touch file="${dodeploy}/bw-self-registration-ear-5.0.0.ear.dodeploy" />
-                   <touch file="${dodeploy}/bw-synch-ear-5.0.0.ear.dodeploy" />
-                   <touch file="${dodeploy}/bw-timezone-server-ear-5.0.0.ear.dodeploy" />
-                  <touch file="${dodeploy}/bw-webclient-cal-4.0.0.war.dodeploy" />
-                  <touch file="${dodeploy}/bw-webclient-caladmin-4.0.0.war.dodeploy" />
-                  <touch file="${dodeploy}/bw-webclient-demosoe-4.0.0.war.dodeploy" />
-                  <touch file="${dodeploy}/bw-webclient-feeder-4.0.0.war.dodeploy" />
-                  <touch file="${dodeploy}/bw-webclient-submit-4.0.0.war.dodeploy" />
-                  <touch file="${dodeploy}/bw-webclient-ucal-4.0.0.war.dodeploy" />
-                 <touch file="${dodeploy}/bw-xml-ear-5.0.1.ear.dodeploy" />
+                <sequential>
+                  <addDodeploy package="deploy.hawtio.war"
+                               module="bw-hawtio" />
+                </sequential>
               </target>
             </configuration>
             <goals>
