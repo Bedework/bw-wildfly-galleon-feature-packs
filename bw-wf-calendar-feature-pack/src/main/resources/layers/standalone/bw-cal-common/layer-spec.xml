@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-cal-common">
+    <!-- Features for calendar event submission -->
+
+    <feature spec="subsystem.bedework-calendar">
+        <feature spec="subsystem.bedework-calendar.indexing">
+            <param name="indexing" value="values"/>
+            <param name="account" value="admin"/>
+            <param name="indexerUrl" value="${com.bedework.oschurls}"/>
+            <param name="indexerUser" value="admin"/>
+            <param name="indexerPw" value="admin"/>
+            <param name="keystore" value="${org.bedework.config.dir}/opensearch/config/osch.keystore"/>
+            <param name="keystorePw" value="nopassword"/>
+        </feature>
+
+        <feature spec="subsystem.bedework-calendar.system">
+            <param name="system" value="values"/>
+            <param name="eventregAdminToken" value="ba48c4dc-ab49-4f55-b2c5-02cd450d2762"/>
+            <param name="eventregUrl" value="http://localhost:8080/eventreg/"/>
+            <param name="rootUsers" value="admin"/>
+            <param name="suggestionEnabled" value="false"/>
+            <param name="systemid" value="demobedework@mysite.edu"/>
+            <param name="tzid" value="America/New_York"/>
+            <param name="workflowEnabled" value="false"/>
+        </feature>
+    </feature>
+</layer-spec>

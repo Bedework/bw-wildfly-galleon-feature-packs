@@ -4,6 +4,7 @@
     <dependencies>
         <layer name="datasources-web-server"/>
         <layer name="bw-postgresql"/>
+        <layer name="bw-cal-common"/>
     </dependencies>
 
     <packages>
@@ -48,6 +49,13 @@
             <param name="exception-sorter-class-name"
                    value="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter"/>
             <param name="idle-timeout-minutes" value="15" />
+        </feature>
+    </feature>
+
+    <feature spec="subsystem.bedework-calendar">
+        <feature spec="subsystem.bedework-calendar.dbconfig">
+            <param name="dbconfig" value="values"/>
+            <param name="hibernateDialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
         </feature>
     </feature>
 </layer-spec>

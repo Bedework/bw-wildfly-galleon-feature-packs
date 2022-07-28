@@ -4,6 +4,7 @@
     <dependencies>
         <layer name="datasources-web-server"/>
         <layer name="bw-h2"/>
+        <layer name="bw-cal-common"/>
     </dependencies>
 
     <packages>
@@ -39,6 +40,13 @@
             <param name="user-name"             value="${org.bedework.db.id.calendar}"/>
             <param name="password"              value="${org.bedework.db.pw.calendar}"/>
             <param name="jta"                   value="true"/>
+        </feature>
+    </feature>
+
+    <feature spec="subsystem.bedework-calendar">
+        <feature spec="subsystem.bedework-calendar.dbconfig">
+            <param name="dbconfig" value="values"/>
+            <param name="hibernateDialect" value="org.hibernate.dialect.H2Dialect"/>
         </feature>
     </feature>
 </layer-spec>

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
-<package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.war.cal">
+<package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.hawtio.war">
   <dependencies>
-    <package name="org.bedework.calendar.ro-war"/>
+    <package name="org.bedework.hawtio"/>
   </dependencies>
 </package-spec>
