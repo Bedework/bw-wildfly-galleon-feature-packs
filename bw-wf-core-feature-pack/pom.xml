@@ -1047,15 +1047,18 @@
                 <macrodef name="addDodeploy">
                   <attribute name="package" />
                   <attribute name="module" />
+                  <attribute name="version" />
                   <sequential>
                     <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
-                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-calendar-deploy.version}.war.dodeploy" />
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-@{version}.war.dodeploy" />
                   </sequential>
                 </macrodef>
 
                 <sequential>
                   <addDodeploy package="deploy.hawtio.war"
-                               module="bw-hawtio" />
+                               module="bw-hawtio"
+                               version="${bw-quickstart.version}"
+                  />
                 </sequential>
               </target>
             </configuration>

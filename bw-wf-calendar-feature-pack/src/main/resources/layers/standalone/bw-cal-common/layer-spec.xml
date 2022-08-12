@@ -1,6 +1,10 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
             name="bw-cal-common">
+    <packages>
+        <package name="deploy.oschconfig"/>
+    </packages>
+
     <!-- Features for calendar event submission -->
 
     <feature spec="subsystem.bedework-calendar">
