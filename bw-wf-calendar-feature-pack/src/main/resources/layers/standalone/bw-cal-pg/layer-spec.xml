@@ -14,7 +14,7 @@
     <feature spec="domain.system-property">
         <param name="system-property" value="org.bedework.db.url.calendar"/>
         <param name="value"
-               value="${org.bedework.site.db.url.calendar:jdbc:postgresql:localhost:5432/caldb}"/>
+               value="${org.bedework.site.db.url.calendar:jdbc:postgresql://localhost:5432/caldb}"/>
     </feature>
 
     <feature spec="domain.system-property">

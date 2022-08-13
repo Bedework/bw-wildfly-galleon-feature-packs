@@ -15,7 +15,7 @@
     <feature spec="domain.system-property">
         <param name="system-property" value="org.bedework.db.url.carddav"/>
         <param name="value"
-               value="${org.bedework.site.db.url.carddav:jdbc:postgresql:localhost:5432/carddb}"/>
+               value="${org.bedework.site.db.url.carddav:jdbc:postgresql://localhost:5432/carddb}"/>
     </feature>
 
     <feature spec="domain.system-property">

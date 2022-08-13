@@ -15,7 +15,7 @@
     <feature spec="domain.system-property">
         <param name="system-property" value="org.bedework.db.url.eventreg"/>
         <param name="value"
-               value="${org.bedework.site.db.url.eventreg:jdbc:postgresql:localhost:5432/eventregdb}"/>
+               value="${org.bedework.site.db.url.eventreg:jdbc:postgresql://localhost:5432/eventregdb}"/>
     </feature>
 
     <feature spec="domain.system-property">
