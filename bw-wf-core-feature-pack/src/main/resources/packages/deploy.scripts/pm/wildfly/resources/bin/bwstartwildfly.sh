@@ -163,7 +163,6 @@ BW_DATA_DIR_DEF="$BW_DATA_DIR_DEF $BW_SYNCH_DATAURI_DEF"
 # Configurations property file
 
 BW_CONF_DIR="$JBOSS_SERVER_DIR/configuration/bedework"
-BW_CONF_FILE_DEF="-Dorg.bedework.config.pfile=$BW_CONF_DIR/config.defs"
 BW_CONF_DIR_DEF="-Dorg.bedework.config.dir=$BW_CONF_DIR/"
 
 # Opensearch home
