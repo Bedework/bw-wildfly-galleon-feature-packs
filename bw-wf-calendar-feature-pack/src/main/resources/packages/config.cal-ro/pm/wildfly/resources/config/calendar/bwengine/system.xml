@@ -13,6 +13,7 @@
   <mailerClass>org.bedework.mail.DummyMailer</mailerClass>
   <rootUsers>admin</rootUsers>
   <socketToken>abcd</socketToken>
+  <synchMaxMinutes>30240</synchMaxMinutes>
   <suggestionEnabled>true</suggestionEnabled>
   <syseventsProperties>
     <syseventsProperty>java.naming.provider.url = vm://bedework</syseventsProperty>
