@@ -7,6 +7,12 @@
         <layer name="bw-common"/>
     </dependencies>
 
+    <feature spec="domain.system-property">
+        <param name="system-property" value="org.bedework.ldap.url"/>
+        <param name="value"
+               value="${org.bedework.site.ldap.url:ldap://localhost:10389}"/>
+    </feature>
+
     <feature spec="subsystem.elytron.ldap-realm">
         <param name="ldap-realm" value="bedeworkRealm"/>
         <param name="dir-context" value="bedeworkLdapConnection"/>
@@ -36,7 +42,7 @@
 
     <feature spec="subsystem.elytron.dir-context">
         <param name="dir-context" value="bedeworkLdapConnection"/>
-        <param name="url" value="ldap://localhost:10389"/>
+        <param name="url" value="${org.bedework.ldap.url}"/>
         <param name="principal" value="&quot;uid=admin,ou=system&quot;"/>
         <param name="credential-reference" value="{clear-text=&quot;secret&quot;}"/>
     </feature>
