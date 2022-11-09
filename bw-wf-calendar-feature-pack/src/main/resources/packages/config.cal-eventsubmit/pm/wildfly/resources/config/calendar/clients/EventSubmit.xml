@@ -23,5 +23,4 @@
   <refreshAction>setup.do</refreshAction>
   <refreshInterval>0</refreshInterval>
   <showYearData>false</showYearData>
-  <submissionRoot>/public/unbrowsable/submissions</submissionRoot>
 </client-config>
