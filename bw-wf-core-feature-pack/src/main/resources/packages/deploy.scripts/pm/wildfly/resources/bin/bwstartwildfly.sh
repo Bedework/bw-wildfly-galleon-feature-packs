@@ -141,7 +141,7 @@ done
 
 # If this is empty only localhost will be available.
 # With this address anybody can access the consoles if they are not locked down.
-JBOSS_BIND="-b 0.0.0.0"
+JBOSS_BIND="-b 0.0.0.0 -bmanagement 0.0.0.0"
 
 LOG_LEVELS="-Dorg.bedework.loglevel.exprfilters=$exprfilters"
 
