@@ -6,9 +6,9 @@
 # Fine to leave it if you don't intend using subscriptions.
 JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.sync.server=http://localhost:8080"
 
-DIRNAME=`dirname "$0"`
+DIRNAME=$(dirname "$0")
 
-. $DIRNAME/bwcommon.sh
+. "$DIRNAME"/bwcommon.sh
 
 export JBOSS_PIDFILE=$TMP_DIR/bedework.jboss.pid
 export LAUNCH_JBOSS_IN_BACKGROUND=true
