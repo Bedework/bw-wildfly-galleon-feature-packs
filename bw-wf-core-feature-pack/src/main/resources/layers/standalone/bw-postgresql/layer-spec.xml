@@ -5,6 +5,11 @@
         <package name="org.bedework.org.postgresql"/>
     </packages>
 
+    <feature spec="subsystem.logging.logger">
+        <param name="logger" value="org.postgresql"/>
+        <param name="level" value="INFO"/>
+    </feature>
+
     <feature spec="subsystem.datasources">
         <feature spec="subsystem.datasources.jdbc-driver">
             <param name="jdbc-driver" value="postgresql"/>
