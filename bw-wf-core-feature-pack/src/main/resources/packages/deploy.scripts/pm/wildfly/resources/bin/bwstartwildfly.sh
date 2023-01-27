@@ -22,8 +22,9 @@ echo "pidfile=$JBOSS_PIDFILE"
 PRG="$0"
 
 usage() {
-  echo "  $PRG [-heap size] [-stack size] [-newsize size] [-permgen size] [-debug]"
-  echo "       [-debugexprfilters name] [-oomdump directory-path]"
+  echo "  $PRG [-heap size] [-stack size] [-newsize size] [-permgen size]"
+  echo "       [-debug] [-debugexprfilters name] "
+  echo "       [-oomdump directory-path] [-logs directory-path]"
   echo ""
   echo " Where:"
   echo ""
@@ -56,6 +57,7 @@ permsize="256M"
 testmode=""
 profiler=""
 oomdump=""
+logdir=""
 
 #debugGc=false
 
@@ -113,6 +115,11 @@ do
     -oomdump)
       shift
       oomdump="-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$1/heap-$(date +'%Y-%m-%d_%H:%m:%S').hprof"
+      shift
+      ;;
+    -logs)
+      shift
+      logdir="-Djboss.server.log.dir=$1"
       shift
       ;;
     -profile)
@@ -175,6 +182,7 @@ JAVA_OPTS="$JAVA_OPTS -Xms$heap -Xmx$heap -Xss$stack"
 # Put all the temp stuff inside the jboss temp
 JAVA_OPTS="$JAVA_OPTS -Djava.io.tmpdir=$JBOSS_SERVER_DIR/tmp"
 JAVA_OPTS="$JAVA_OPTS $oomdump"
+JAVA_OPTS="$JAVA_OPTS $logdir"
 JAVA_OPTS="$JAVA_OPTS $profiler"
 
 #HAWT_OPTS="-Dhawtio.authenticationEnabled=true -Dhawtio.realm=other -Dhawtio.role=hawtioadmin"
