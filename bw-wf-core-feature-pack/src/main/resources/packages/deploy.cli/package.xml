@@ -3,5 +3,6 @@
 <package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.cli">
   <dependencies>
     <package name="org.bedework.cli.cli-app"/>
+    <package name="org.bedework.logs"/>
   </dependencies>
 </package-spec>
