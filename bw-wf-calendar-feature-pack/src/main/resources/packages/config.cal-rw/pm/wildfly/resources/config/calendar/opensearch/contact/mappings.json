@@ -4,7 +4,10 @@
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
-          "tokenizer": "evprop_ngram_tokenizer"
+          "tokenizer": "evprop_ngram_tokenizer",
+          "filter": [
+            "lowercase"
+          ]
         },
         "evprop-autocomplete": {
           "type": "custom",
