@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-mysql">
+    <packages>
+        <package name="org.bedework.com.mysql"/>
+    </packages>
+
+    <feature spec="subsystem.logging.logger">
+        <param name="logger" value="org.mysql"/>
+        <param name="level" value="INFO"/>
+    </feature>
+
+    <feature spec="subsystem.datasources">
+        <feature spec="subsystem.datasources.jdbc-driver">
+            <param name="jdbc-driver" value="mysql"/>
+            <param name="driver-name" value="mysql"/>
+            <param name="driver-module-name" value="org.bedework.com.mysql"/>
+        </feature>
+    </feature>
+</layer-spec>

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-demopublic-mysql">
+    <dependencies>
+        <layer name="bw-auth-apacheds"/>
+        <layer name="bw-public-mysql"/>
+        <layer name="bw-carddav-mysql"/>
+        <layer name="bw-eventreg-mysql"/>
+        <layer name="bw-cal-eventsubmit-mysql"/>
+        <layer name="bw-cal-demosoe-mysql"/>
+        <layer name="bw-notify-mysql"/>
+        <layer name="bw-qs-bedework"/>
+        <layer name="bw-selfreg-mysql"/>
+        <layer name="bw-synch-mysql"/>
+    </dependencies>
+
+    <packages>
+        <package name="deploy.opensearch-qs"/>
+        <package name="deploy.qsscripts"/>
+    </packages>
+</layer-spec>

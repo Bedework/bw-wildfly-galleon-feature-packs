@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-public-mysql">
+    <dependencies>
+        <layer name="bw-cal-mysql"/>
+        <layer name="bw-public-rw"/>
+    </dependencies>
+
+    <packages>
+        <package name="config.cal-mysql"/>
+        <package name="config.public-rw"/>
+    </packages>
+</layer-spec>

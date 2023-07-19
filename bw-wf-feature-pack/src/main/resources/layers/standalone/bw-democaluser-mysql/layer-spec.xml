@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-democaluser-mysql">
+    <dependencies>
+        <layer name="bw-auth-apacheds"/>
+        <layer name="bw-carddav-mysql"/>
+        <layer name="bw-cal-user-mysql"/>
+        <layer name="bw-notify-mysql"/>
+        <layer name="bw-qs-bedework"/>
+    </dependencies>
+
+    <packages>
+        <package name="deploy.opensearch-qs"/>
+        <package name="deploy.qsscripts"/>
+    </packages>
+</layer-spec>

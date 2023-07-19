@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
-            name="bw-cal-eventsubmit-mysql">
+            name="bw-cal-demosoe-mysql">
     <!-- Features for calendar event submission -->
 
     <dependencies>
-        <layer name="bw-cal-eventsubmit"/>
+        <layer name="bw-cal-demosoe"/>
         <layer name="bw-public-mysql"/>
     </dependencies>
 </layer-spec>
