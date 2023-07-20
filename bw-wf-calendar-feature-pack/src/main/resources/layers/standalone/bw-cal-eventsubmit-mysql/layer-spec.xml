@@ -5,6 +5,6 @@
 
     <dependencies>
         <layer name="bw-cal-eventsubmit"/>
-        <layer name="bw-public-pg"/>
+        <layer name="bw-public-mysql"/>
     </dependencies>
 </layer-spec>
