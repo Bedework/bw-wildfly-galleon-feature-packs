@@ -17,12 +17,13 @@
   ~ limitations under the License.
   -->
 
-<module xmlns="urn:jboss:module:1.8" name="org.jasig.cas.client">
+<module xmlns="urn:jboss:module:1.8" name="org.bedework.org.jasig.cas.client">
     <resources>
         <artifact name="${org.jasig.cas.client:cas-client-core}"/>
     </resources>
 
     <dependencies>
+        <module name="org.slf4j"/>
         <module name="wildflyee.api"/>
     </dependencies>
 </module>
