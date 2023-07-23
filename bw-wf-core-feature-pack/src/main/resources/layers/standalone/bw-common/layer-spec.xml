@@ -79,17 +79,7 @@
     </feature>
 
     <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.jboss.modules"/>
-        <param name="level" value="INFO"/>
-    </feature>
-
-    <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.jboss.jca.core"/>
-        <param name="level" value="INFO"/>
-    </feature>
-
-    <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.jboss.weld"/>
+        <param name="logger" value="org.jboss.as"/>
         <param name="level" value="INFO"/>
     </feature>
 
@@ -99,12 +89,22 @@
     </feature>
 
     <feature spec="subsystem.logging.logger">
+        <param name="logger" value="org.jboss.jca"/>
+        <param name="level" value="INFO"/>
+    </feature>
+
+    <feature spec="subsystem.logging.logger">
+        <param name="logger" value="org.jboss.modules"/>
+        <param name="level" value="INFO"/>
+    </feature>
+
+    <feature spec="subsystem.logging.logger">
         <param name="logger" value="org.jboss.security"/>
         <param name="level" value="INFO"/>
     </feature>
 
     <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.jboss.as"/>
+        <param name="logger" value="org.jboss.weld"/>
         <param name="level" value="INFO"/>
     </feature>
 
@@ -139,12 +139,12 @@
     </feature>
 
     <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.apache.camel"/>
+        <param name="logger" value="org.apache.aries"/>
         <param name="level" value="INFO"/>
     </feature>
 
     <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.apache.aries"/>
+        <param name="logger" value="org.apache.camel"/>
         <param name="level" value="INFO"/>
     </feature>
 
@@ -152,6 +152,12 @@
         <param name="logger" value="org.apache.cxf"/>
         <param name="level" value="INFO"/>
     </feature>
+
+    <feature spec="subsystem.logging.logger">
+        <param name="logger" value="org.apache.struts2"/>
+        <param name="level" value="INFO"/>
+    </feature>
+
     <feature spec="subsystem.logging.logger">
         <param name="logger" value="com.sun.xml"/>
         <param name="level" value="INFO"/>
@@ -183,16 +189,6 @@
     </feature>
 
     <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.apache.struts"/>
-        <param name="level" value="INFO"/>
-    </feature>
-
-    <feature spec="subsystem.logging.logger">
-        <param name="logger" value="org.apache.struts.util.PropertyMessageResources"/>
-        <param name="level" value="ERROR"/>
-    </feature>
-
-    <feature spec="subsystem.logging.logger">
         <param name="logger" value="org.apache.commons.digester.Digester"/>
         <param name="level" value="INFO"/>
     </feature>
@@ -208,13 +204,18 @@
     </feature>
 
     <feature spec="subsystem.logging.logger">
+        <param name="logger" value="org.bedework.access.EvaluatedAccessCache"/>
+        <param name="level" value="INFO"/>
+    </feature>
+
+    <feature spec="subsystem.logging.logger">
         <param name="logger" value="org.bedework.access.EncodedAcl"/>
         <param name="level" value="INFO"/>
     </feature>
 
     <feature spec="subsystem.logging.logger">
         <param name="logger" value="org.bedework.calcore.common.indexing.BwIndexEsImpl"/>
-        <param name="level" value="DEBUG"/>
+        <param name="level" value="INFO"/>
     </feature>
 
     <feature spec="subsystem.logging.logger">
