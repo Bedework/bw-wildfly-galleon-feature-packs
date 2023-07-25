@@ -14,7 +14,7 @@
   <rootUsers>admin</rootUsers>
   <socketToken>abcd</socketToken>
   <synchMaxMinutes>30240</synchMaxMinutes>
-  <submissionRoot>/public/unbrowsable/submissions</submissionRoot>
+  <submissionRoot>/public/unbrowsable/submissions/submissions</submissionRoot>
   <suggestionEnabled>true</suggestionEnabled>
   <syseventsProperties>
     <syseventsProperty>java.naming.provider.url = vm://bedework</syseventsProperty>
