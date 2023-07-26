@@ -10,7 +10,7 @@
   <browserResourceRoot>/approots/eventsubmitrsrc</browserResourceRoot>
   <calSuite>MainCampus</calSuite>
   <guestMode>false</guestMode>
-  <hour24>true</hour24>
+  <hour24>false</hour24>
   <logPrefix>EventSubmit</logPrefix>
   <mbeanClassName>org.bedework.webcommon.config.ClientConf</mbeanClassName>
   <minIncrement>5</minIncrement>

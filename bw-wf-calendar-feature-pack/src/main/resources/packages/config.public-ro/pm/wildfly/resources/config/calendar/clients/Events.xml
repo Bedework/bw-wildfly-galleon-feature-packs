@@ -10,7 +10,7 @@
   <browserResourceRoot>/approots/calrsrc</browserResourceRoot>
   <calSuite>MainCampus</calSuite>
   <guestMode>true</guestMode>
-  <hour24>true</hour24>
+  <hour24>false</hour24>
   <logPrefix>PubEvents</logPrefix>
   <mbeanClassName>org.bedework.webcommon.config.ClientConf</mbeanClassName>
   <minIncrement>5</minIncrement>

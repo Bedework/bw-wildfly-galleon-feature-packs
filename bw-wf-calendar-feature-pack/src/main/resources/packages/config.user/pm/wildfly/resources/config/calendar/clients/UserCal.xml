@@ -9,7 +9,7 @@
   <autoDeleteLocations>false</autoDeleteLocations>
   <browserResourceRoot>/approots/ucalrsrc</browserResourceRoot>
   <guestMode>false</guestMode>
-  <hour24>true</hour24>
+  <hour24>false</hour24>
   <logPrefix>PersonalCalendar</logPrefix>
   <mbeanClassName>org.bedework.webcommon.config.ClientConf</mbeanClassName>
   <minIncrement>5</minIncrement>
