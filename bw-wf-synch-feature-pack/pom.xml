@@ -13,6 +13,12 @@
   <artifactId>bw-wf-synch-feature-pack</artifactId>
   <packaging>pom</packaging>
 
+  <properties>
+    <resourcesDir>${project.build.directory}/generated/resources</resourcesDir>
+
+    <feature-pack.resources.directory>${project.basedir}/src/main/resources</feature-pack.resources.directory>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.bedework.deploy</groupId>
@@ -20,17 +26,82 @@
       <type>zip</type>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-xml-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
     <!-- ================= bw-synch ================= -->
 
     <dependency>
       <groupId>org.bedework.bw-synch</groupId>
-      <artifactId>bw-synch-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-synch-war</artifactId>
+      <type>war</type>
     </dependency>
 
   </dependencies>
+
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-feature-pack-layer-package-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${resourcesDir}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${feature-pack.resources.directory}</directory>
+                  <includes>
+                    <include>layers/**</include>
+                    <include>packages/**</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Now create the dodeploy files -->
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>create-dodeploy-resources</id>
+            <phase>process-resources</phase>
+            <configuration>
+              <target>
+
+                <macrodef name="addDodeploy">
+                  <attribute name="package" />
+                  <attribute name="module" />
+                  <sequential>
+                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-synch.version}.war.dodeploy" />
+                  </sequential>
+                </macrodef>
+
+                <sequential>
+                  <addDodeploy package="deploy.synch"
+                               module="bw-synch-war" />
+                </sequential>
+
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.wildfly.galleon-plugins</groupId>
         <artifactId>wildfly-galleon-maven-plugin</artifactId>
