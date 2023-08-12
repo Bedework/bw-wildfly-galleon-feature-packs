@@ -669,8 +669,8 @@
 
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-xml-war</artifactId>
+      <type>war</type>
     </dependency>
 
     <dependency>
