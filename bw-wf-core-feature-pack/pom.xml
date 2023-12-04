@@ -650,6 +650,11 @@
       <artifactId>bw-wf-calendar-subsystem</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework.wfextensions</groupId>
+      <artifactId>bw-wf-undertow-handlers</artifactId>
+    </dependency>
+
     <!-- Bedework: XML -->
 
     <dependency>
