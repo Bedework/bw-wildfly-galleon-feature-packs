@@ -205,6 +205,14 @@
       <artifactId>bw-cli</artifactId>
     </dependency>
 
+    <!-- ============ transitive ============ -->
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <scope>compile,runtime</scope>
+    </dependency>
+
     <!-- ============ wildfly extensions ============ -->
 
     <dependency>

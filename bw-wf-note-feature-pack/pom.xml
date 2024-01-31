@@ -24,8 +24,8 @@
 
     <dependency>
       <groupId>org.bedework.notifier</groupId>
-      <artifactId>bw-note-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-note-war</artifactId>
+      <type>war</type>
     </dependency>
 
   </dependencies>
