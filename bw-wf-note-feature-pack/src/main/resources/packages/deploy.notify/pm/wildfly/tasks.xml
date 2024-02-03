@@ -1,6 +1,9 @@
 <?xml version="1.0" ?>
 
 <tasks xmlns="urn:wildfly:wildfly-feature-pack-tasks:3.0">
-    <copy-artifact artifact="org.bedework.notifier:bw-note-ear:::ear"
+    <copy-artifact artifact="org.bedework.notifier:bw-note-war:::war"
                    to-location="standalone/deployments/"/>
+    <copy-path src="resources/"
+               relative-to="resources"
+               target="standalone/deployments/"/>
 </tasks>

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 
-<package-spec xmlns="urn:jboss:galleon:package:2.0" name="config.notify-pg">
+<package-spec xmlns="urn:jboss:galleon:package:2.0" name="config.notify-mysql">
   <dependencies>
     <package name="config.notify"/>
   </dependencies>
