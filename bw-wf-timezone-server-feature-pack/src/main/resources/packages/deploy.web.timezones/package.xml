@@ -2,6 +2,6 @@
 
 <package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.web.timezones">
   <dependencies>
-    <package name="org.bedework.timezone.server.ear"/>
+    <package name="org.bedework.timezone.server.web"/>
   </dependencies>
 </package-spec>
