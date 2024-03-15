@@ -487,8 +487,8 @@
 
     <dependency>
       <groupId>org.bedework.bw-tzsvr</groupId>
-      <artifactId>bw-timezone-server-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-timezone-server-war</artifactId>
+      <type>war</type>
     </dependency>
 
     <!-- ================= bw-util ================= -->
