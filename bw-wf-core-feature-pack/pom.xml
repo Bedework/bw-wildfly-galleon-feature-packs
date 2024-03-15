@@ -441,8 +441,8 @@
 
     <dependency>
       <groupId>org.bedework.selfreg</groupId>
-      <artifactId>bw-self-registration-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-self-registration-war</artifactId>
+      <type>war</type>
     </dependency>
 
     <!-- ================= bw-synch ================= -->

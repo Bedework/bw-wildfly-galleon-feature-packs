@@ -2,6 +2,6 @@
 
 <package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.selfreg">
     <dependencies>
-        <package name="org.bedework.selfreg.ear"/>
+        <package name="org.bedework.selfreg.web"/>
     </dependencies>
 </package-spec>
