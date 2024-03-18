@@ -22,6 +22,12 @@
       <type>zip</type>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-icalendar-xml</artifactId>
+      <type>zip</type>
+    </dependency>
+
     <!-- ============ bw-self-registration =========== -->
 
     <dependency>

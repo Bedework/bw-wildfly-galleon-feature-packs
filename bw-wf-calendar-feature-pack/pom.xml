@@ -29,6 +29,12 @@
       <type>zip</type>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-calws-soap-xml</artifactId>
+      <type>zip</type>
+    </dependency>
+
     <!-- ============= bw-calendar-client ============= -->
 
     <dependency>
@@ -258,6 +264,29 @@
                   </includes>
                 </resource>
               </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Download the calws wsdls -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+
+        <executions>
+          <execution>
+            <id>copy-and-unpack-icalendar</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <includeGroupIds>org.bedework</includeGroupIds>
+              <includeArtifactIds>bw-calws-soap-xml</includeArtifactIds>
+              <includeTypes>zip</includeTypes>
+
+              <outputDirectory>${resourcesDir}/packages/config.cal-ro/pm/wildfly/resources/pubcalws-soap</outputDirectory>
             </configuration>
           </execution>
         </executions>

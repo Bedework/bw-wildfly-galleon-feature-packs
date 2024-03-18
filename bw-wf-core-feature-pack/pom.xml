@@ -491,6 +491,11 @@
       <type>war</type>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework.bw-tzsvr</groupId>
+      <artifactId>bw-timezone-server-xml</artifactId>
+    </dependency>
+
     <!-- ================= bw-util ================= -->
 
     <dependency>
@@ -680,8 +685,7 @@
 
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-icalendar</artifactId>
-      <version>${bw-xml.version}</version>
+      <artifactId>bw-icalendar-xml</artifactId>
     </dependency>
 
     <dependency>
@@ -692,11 +696,6 @@
     <dependency>
       <groupId>org.bedework</groupId>
       <artifactId>bw-xml-synchws</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-tzsvr</artifactId>
     </dependency>
 
     <dependency>

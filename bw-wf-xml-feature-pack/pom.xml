@@ -59,27 +59,7 @@
 
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-exchangews</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-icalendar</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-bwlicense</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
       <artifactId>bw-xml-synchws</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-tzsvr</artifactId>
     </dependency>
   </dependencies>
 

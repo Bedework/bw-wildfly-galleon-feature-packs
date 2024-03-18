@@ -34,6 +34,12 @@
       <type>zip</type>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-icalendar-xml</artifactId>
+      <type>zip</type>
+    </dependency>
+
     <!-- ============ bw-timezone-server =========== -->
 
     <dependency>
@@ -42,7 +48,6 @@
       <type>war</type>
     </dependency>
   </dependencies>
-
 
   <build>
     <plugins>

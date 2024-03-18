@@ -3,4 +3,6 @@
 <tasks xmlns="urn:wildfly:wildfly-feature-pack-tasks:3.0">
     <copy-path src="resources/config/calendar" relative-to="resources"
                target="standalone/configuration/bedework"/>
+    <copy-path src="resources/pubcalws-soap" relative-to="resources"
+               target="bedework-content/xml/pubcalws-soap/"/>
 </tasks>
