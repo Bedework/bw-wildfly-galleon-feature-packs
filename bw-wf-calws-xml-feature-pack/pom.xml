@@ -3,15 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>org.bedework.deploy</groupId>
     <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
     <version>4.0.4-SNAPSHOT</version>
   </parent>
 
-  <artifactId>bw-wf-xml-feature-pack</artifactId>
+  <artifactId>bw-wf-calws-xml-feature-pack</artifactId>
   <packaging>pom</packaging>
+  <name>Bedework: Wildfly Galleon calws xml feature pack</name>
+  <description>Build Wildfly Galleon calws xml feature pack</description>
+  <url>https://github.com/Bedework/bw-wf-calws-xml-feature-pack</url>
 
   <properties>
     <resourcesDir>${project.build.directory}/generated/resources</resourcesDir>
@@ -28,23 +30,10 @@
       <type>zip</type>
     </dependency>
 
-    <!-- ================= bw-xml ================= -->
-
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-xml</artifactId>
-      <type>pom</type>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-war</artifactId>
-      <type>war</type>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-synchws</artifactId>
+      <artifactId>bw-calws-soap-xml</artifactId>
+      <type>zip</type>
     </dependency>
   </dependencies>
 
@@ -75,35 +64,25 @@
         </executions>
       </plugin>
 
-      <!-- Now create the dodeploy files -->
+      <!-- Download the calws wsdls -->
       <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+
         <executions>
           <execution>
-            <id>create-dodeploy-resources</id>
+            <id>copy-and-unpack-calws</id>
             <phase>process-resources</phase>
-            <configuration>
-              <target>
-
-                <macrodef name="addDodeploy">
-                  <attribute name="package" />
-                  <attribute name="module" />
-                  <sequential>
-                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
-                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-xml.version}.war.dodeploy" />
-                  </sequential>
-                </macrodef>
-
-                <sequential>
-                  <addDodeploy package="deploy.xml"
-                               module="bw-xml-war" />
-                </sequential>
-
-              </target>
-            </configuration>
             <goals>
-              <goal>run</goal>
+              <goal>unpack-dependencies</goal>
             </goals>
+            <configuration>
+              <includeGroupIds>org.bedework</includeGroupIds>
+              <includeArtifactIds>bw-calws-soap-xml</includeArtifactIds>
+              <includeTypes>zip</includeTypes>
+
+              <outputDirectory>${resourcesDir}/packages/deploy.calws.xml/pm/wildfly/resources/pubcalws-soap</outputDirectory>
+            </configuration>
           </execution>
         </executions>
       </plugin>

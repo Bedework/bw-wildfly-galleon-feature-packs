@@ -29,12 +29,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-wf-xml-feature-pack</artifactId>
-      <type>zip</type>
-    </dependency>
-
-    <dependency>
       <groupId>org.bedework</groupId>
       <artifactId>bw-icalendar-xml</artifactId>
       <type>zip</type>

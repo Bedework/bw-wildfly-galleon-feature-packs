@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-calws-xml">
+  <dependencies>
+    <layer name="bw-common"/>
+  </dependencies>
+
+  <packages>
+    <package name="deploy.calws.xml"/>
+  </packages>
+</layer-spec>

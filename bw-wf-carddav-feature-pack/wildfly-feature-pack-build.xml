@@ -16,8 +16,8 @@
 
 <build xmlns="urn:wildfly:feature-pack-build:3.2" producer="org.bedework.deploy:bw-wf-carddav-feature-pack">
     <dependencies>
-        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-xml-feature-pack">
-            <name>org.bedework:bw-wf-xml-feature-pack</name>
+        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-core-feature-pack">
+            <name>org.bedework:bw-wf-core-feature-pack</name>
             <default-configs inherit="false"/>
             <packages inherit="false"/>
         </dependency>

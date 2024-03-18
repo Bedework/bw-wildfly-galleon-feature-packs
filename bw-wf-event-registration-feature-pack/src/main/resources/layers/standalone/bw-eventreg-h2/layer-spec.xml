@@ -4,6 +4,7 @@
     <dependencies>
         <layer name="bw-tzserver"/>
         <layer name="bw-h2"/>
+        <layer name="bw-calws-xml"/>
     </dependencies>
 
     <packages>

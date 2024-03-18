@@ -32,9 +32,10 @@
     <module>bw-wf-note-feature-pack</module>
     <module>bw-wf-self-registration-feature-pack</module>
     <module>bw-wf-synch-feature-pack</module>
+    <module>bw-wf-synch-xml-feature-pack</module>
     <module>bw-wf-timezone-server-feature-pack</module>
-    <module>bw-wf-xml-feature-pack</module>
     <module>bw-wf-keycloak-saml-filter-feature-pack</module>
     <module>bw-wf-cas-filter-feature-pack</module>
+    <module>bw-wf-calws-xml-feature-pack</module>
   </modules>
 </project>

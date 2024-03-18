@@ -26,12 +26,6 @@
       <type>zip</type>
     </dependency>
 
-    <dependency>
-      <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-wf-xml-feature-pack</artifactId>
-      <type>zip</type>
-    </dependency>
-
     <!-- ================= bw-synch ================= -->
 
     <dependency>
@@ -39,7 +33,6 @@
       <artifactId>bw-synch-war</artifactId>
       <type>war</type>
     </dependency>
-
   </dependencies>
 
   <build>

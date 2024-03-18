@@ -83,6 +83,16 @@
       <artifactId>bw-caldav-util</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-caldav-xml</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-calws-soap-xml</artifactId>
+    </dependency>
+
     <!-- ============= bw-calendar-client ============= -->
 
     <dependency>
@@ -659,28 +669,7 @@
 
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-appleServer</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-caldav</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-calws-soap</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-war</artifactId>
-      <type>war</type>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-exchangews</artifactId>
+      <artifactId>bw-exchangews-xml</artifactId>
     </dependency>
 
     <dependency>
@@ -689,13 +678,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-bwlicense</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-xml-synchws</artifactId>
+      <groupId>org.bedework.bw-synch</groupId>
+      <artifactId>bw-synch-ws-xml</artifactId>
     </dependency>
 
     <dependency>

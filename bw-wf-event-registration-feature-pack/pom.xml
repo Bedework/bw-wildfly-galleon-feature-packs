@@ -18,7 +18,7 @@
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-wf-xml-feature-pack</artifactId>
+      <artifactId>bw-wf-calws-xml-feature-pack</artifactId>
       <type>zip</type>
     </dependency>
 

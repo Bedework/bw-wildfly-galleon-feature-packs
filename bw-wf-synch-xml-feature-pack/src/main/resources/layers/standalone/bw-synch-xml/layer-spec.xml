@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0"
+            name="bw-synch-xml">
+  <dependencies>
+    <layer name="bw-common"/>
+  </dependencies>
+
+  <packages>
+    <package name="deploy.synch.xml"/>
+  </packages>
+</layer-spec>
