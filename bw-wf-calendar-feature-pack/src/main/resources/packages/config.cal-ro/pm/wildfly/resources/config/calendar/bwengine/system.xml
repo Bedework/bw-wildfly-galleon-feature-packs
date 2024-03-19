@@ -5,7 +5,7 @@
   <autoKillMinutes>0</autoKillMinutes>
   <cacheUrlPrefix>http://localhost:7070</cacheUrlPrefix>
   <calSoapWsURI>/calws-soap/</calSoapWsURI>
-  <calSoapWsWSDLURI>http://localhost:8080/xmlspec/wsdls/calws-soap/wssvc.wsdl</calSoapWsWSDLURI>
+  <calSoapWsWSDLURI>http://localhost:8080/calws-soap/wsdls/wssvc.wsdl</calSoapWsWSDLURI>
   <eventregAdminToken>ba48c4dc-ab49-4f55-b2c5-02cd450d2762</eventregAdminToken>
   <eventregUrl>http://localhost:8080/eventreg/</eventregUrl>
   <featureFlags>-VPOLLUI-</featureFlags>

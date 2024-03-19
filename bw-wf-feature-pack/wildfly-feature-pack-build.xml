@@ -22,6 +22,12 @@
             <packages inherit="true"/>
         </dependency>
 
+        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-calws-xml-feature-pack">
+            <name>org.bedework.deploy:bw-wf-calws-xml-feature-pack</name>
+            <default-configs inherit="false"/>
+            <packages inherit="true"/>
+        </dependency>
+
         <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-carddav-feature-pack">
             <name>org.bedework.deploy:bw-wf-carddav-feature-pack</name>
             <default-configs inherit="false"/>
@@ -54,6 +60,12 @@
 
         <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-synch-feature-pack">
             <name>org.bedework.deploy:bw-wf-synch-feature-pack</name>
+            <default-configs inherit="false"/>
+            <packages inherit="true"/>
+        </dependency>
+
+        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-synch-xml-feature-pack">
+            <name>org.bedework.deploy:bw-wf-synch-xml-feature-pack</name>
             <default-configs inherit="false"/>
             <packages inherit="true"/>
         </dependency>

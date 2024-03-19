@@ -10,7 +10,6 @@
         <package name="config.synch-h2"/>
         <package name="data.synch-h2"/>
         <package name="deploy.synch"/>
-        <package name="deploy.xml"/>
     </packages>
 
     <feature spec="domain.system-property">

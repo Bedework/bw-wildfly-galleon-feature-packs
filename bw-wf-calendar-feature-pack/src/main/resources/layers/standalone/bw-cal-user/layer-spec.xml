@@ -16,6 +16,5 @@
         <package name="deploy.webservice.publicws"/>
         <package name="deploy.webservice.ucaldav"/>
         <package name="deploy.webservice.userws"/>
-        <package name="deploy.xml"/>
     </packages>
 </layer-spec>

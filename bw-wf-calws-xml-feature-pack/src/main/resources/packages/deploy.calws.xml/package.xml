@@ -2,6 +2,6 @@
 
 <package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.calws.xml">
   <dependencies>
-    <package name="config.common"/>
+    <package name="deploy.bedework-content"/>
   </dependencies>
 </package-spec>

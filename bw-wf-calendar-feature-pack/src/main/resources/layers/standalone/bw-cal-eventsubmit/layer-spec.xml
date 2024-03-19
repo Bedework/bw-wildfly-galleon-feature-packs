@@ -11,6 +11,5 @@
         <package name="config.cal-eventsubmit"/>
         <package name="deploy.calendar-xsl-eventsubmitrsrc"/>
         <package name="deploy.war.eventsubmit"/>
-        <package name="deploy.xml"/>
     </packages>
 </layer-spec>

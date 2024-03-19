@@ -10,7 +10,6 @@
     <packages>
         <package name="config.eventreg-pg"/>
         <package name="deploy.eventreg"/>
-        <package name="deploy.xml"/>
     </packages>
 
     <feature spec="domain.system-property">

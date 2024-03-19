@@ -10,7 +10,6 @@
     <packages>
         <package name="config.eventreg-mysql"/>
         <package name="deploy.eventreg"/>
-        <package name="deploy.xml"/>
     </packages>
 
     <feature spec="domain.system-property">

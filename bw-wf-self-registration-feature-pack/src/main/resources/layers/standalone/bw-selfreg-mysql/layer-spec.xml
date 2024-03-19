@@ -9,7 +9,6 @@
     <packages>
         <package name="config.selfreg-mysql"/>
         <package name="deploy.selfreg"/>
-        <package name="deploy.xml"/>
     </packages>
 
     <feature spec="domain.system-property">

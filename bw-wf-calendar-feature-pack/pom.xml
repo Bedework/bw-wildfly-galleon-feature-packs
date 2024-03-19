@@ -25,7 +25,7 @@
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-wf-core-feature-pack</artifactId>
+      <artifactId>bw-wf-synch-xml-feature-pack</artifactId>
       <type>zip</type>
     </dependency>
 

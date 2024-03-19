@@ -10,7 +10,6 @@
         <package name="config.notify-h2"/>
         <package name="data.notify-h2"/>
         <package name="deploy.notify"/>
-        <package name="deploy.xml"/>
     </packages>
 
     <feature spec="domain.system-property">

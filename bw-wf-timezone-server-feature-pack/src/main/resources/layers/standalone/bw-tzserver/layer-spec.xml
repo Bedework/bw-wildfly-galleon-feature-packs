@@ -8,7 +8,6 @@
     <packages>
         <package name="config.timezones"/>
         <package name="data.timezones"/>
-        <package name="deploy.xml"/>
         <package name="deploy.web.timezones"/>
     </packages>
 

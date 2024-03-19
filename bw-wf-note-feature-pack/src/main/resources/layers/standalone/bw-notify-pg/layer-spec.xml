@@ -9,7 +9,6 @@
     <packages>
         <package name="config.notify-pg"/>
         <package name="deploy.notify"/>
-        <package name="deploy.xml"/>
     </packages>
 
     <feature spec="domain.system-property">

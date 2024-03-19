@@ -10,7 +10,6 @@
         <package name="config.carddav-h2"/>
         <package name="data.carddav-h2"/>
         <package name="deploy.carddav"/>
-        <package name="deploy.xml"/>
     </packages>
 
     <feature spec="domain.system-property">
