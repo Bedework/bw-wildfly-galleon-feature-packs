@@ -24,18 +24,120 @@
 
   <modules>
     <module>bw-wf-calendar-feature-pack</module>
+    <module>bw-wf-calws-xml-feature-pack</module>
     <module>bw-wf-carddav-feature-pack</module>
+    <module>bw-wf-cas-filter-feature-pack</module>
     <module>bw-wf-category-feature-pack</module>
     <module>bw-wf-core-feature-pack</module>
     <module>bw-wf-event-registration-feature-pack</module>
     <module>bw-wf-feature-pack</module>
+    <module>bw-wf-keycloak-saml-filter-feature-pack</module>
     <module>bw-wf-note-feature-pack</module>
     <module>bw-wf-self-registration-feature-pack</module>
     <module>bw-wf-synch-feature-pack</module>
     <module>bw-wf-synch-xml-feature-pack</module>
     <module>bw-wf-timezone-server-feature-pack</module>
-    <module>bw-wf-keycloak-saml-filter-feature-pack</module>
-    <module>bw-wf-cas-filter-feature-pack</module>
-    <module>bw-wf-calws-xml-feature-pack</module>
   </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-calendar-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-calws-xml-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-carddav-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-cas-filter-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-category-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-core-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-event-registration-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-keycloak-saml-filter-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-note-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-self-registration-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-synch-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-synch-xml-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-timezone-server-feature-pack</artifactId>
+        <type>zip</type>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
