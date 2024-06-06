@@ -35,6 +35,16 @@
   </feature>
 
   <feature spec="subsystem.logging.periodic-rotating-file-handler">
+    <param name="periodic-rotating-file-handler" value="WARN"/>
+    <param name="level" value="WARN"/>
+    <param name="named-formatter" value="PATTERN"/>
+    <param name="file" value="{relative-to=jboss.server.log.dir,path=warnings.log}"/>
+    <param name="suffix" value=".yyyy-MM-dd"/>
+    <param name="append" value="true"/>
+    <param name="autoflush" value="true"/>
+  </feature>
+
+  <feature spec="subsystem.logging.periodic-rotating-file-handler">
     <param name="periodic-rotating-file-handler" value="SYSEVENTS"/>
     <param name="named-formatter" value="PATTERN"/>
     <param name="file" value="{relative-to=jboss.server.log.dir,path=bwsysevents.log}"/>
@@ -282,7 +292,7 @@
 
   <feature spec="subsystem.logging.root-logger.ROOT">
     <param name="level" value="${org.bedework.log.level:INFO}"/>
-    <param name="handlers" value="[CONSOLE,FILE,ERRORS]"/>
+    <param name="handlers" value="[CONSOLE,WARN,FILE,ERRORS]"/>
   </feature>
 
   <!-- Activemq -->
