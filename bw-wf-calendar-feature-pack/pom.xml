@@ -198,13 +198,13 @@
       <type>war</type>
     </dependency>
 
-    <!-- ============ bw-cli ============ -->
+    <!-- ============ bw-cli ============
 
     <dependency>
       <groupId>org.bedework</groupId>
       <artifactId>bw-cli</artifactId>
     </dependency>
-
+ -->
     <!-- ============ transitive ============ -->
 
     <dependency>
