@@ -198,13 +198,28 @@
       <type>war</type>
     </dependency>
 
-    <!-- ============ bw-cli ============
+    <!-- ============ bw-cli ============ -->
 
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-cli</artifactId>
+      <artifactId>bw-cli-bwcmd</artifactId>
     </dependency>
- -->
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-cli-jmx</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-cli-shell</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-cli-toolcmd</artifactId>
+    </dependency>
+
     <!-- ============ transitive ============ -->
 
     <dependency>
