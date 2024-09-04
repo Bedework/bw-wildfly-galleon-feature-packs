@@ -48,5 +48,5 @@
   </hibernateProperties>
   <schemaOutFile>${org.bedework.data.dir}/eventreg/schema.txt</schemaOutFile>
   <tzsUri>http://localhost:8080/tzsvr</tzsUri>
-  <wsdlUri>http://localhost:8080/xml/pubcalws-soap/wssvc.wsdl</wsdlUri>
+  <wsdlUri>http://localhost:8080/xml/pubcalws-soap/wsdls/wssvc.wsdl</wsdlUri>
 </eventreg-properties>
