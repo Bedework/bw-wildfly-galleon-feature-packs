@@ -26,7 +26,7 @@
     <feature spec="domain.system-property">
         <param name="system-property" value="org.bedework.db.pw.calendar"/>
         <param name="value"
-               value="${org.bedework.site.db.calendar.pw:bw}"/>
+               value="${org.bedework.site.db.pw.calendar:bw}"/>
     </feature>
 
     <feature spec="subsystem.datasources">
