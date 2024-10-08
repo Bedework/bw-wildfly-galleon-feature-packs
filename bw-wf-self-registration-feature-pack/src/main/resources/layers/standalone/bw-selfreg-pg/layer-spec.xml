@@ -26,7 +26,7 @@
     <feature spec="domain.system-property">
         <param name="system-property" value="org.bedework.db.pw.selfreg"/>
         <param name="value"
-               value="${org.bedework.site.db.selfreg.pw:bw}"/>
+               value="${org.bedework.site.db.pw.selfreg:bw}"/>
     </feature>
 
     <feature spec="subsystem.datasources">

@@ -27,7 +27,7 @@
     <feature spec="domain.system-property">
         <param name="system-property" value="org.bedework.db.pw.eventreg"/>
         <param name="value"
-               value="${org.bedework.site.db.eventreg.pw:bw}"/>
+               value="${org.bedework.site.db.pw.eventreg:bw}"/>
     </feature>
 
     <feature spec="subsystem.datasources">

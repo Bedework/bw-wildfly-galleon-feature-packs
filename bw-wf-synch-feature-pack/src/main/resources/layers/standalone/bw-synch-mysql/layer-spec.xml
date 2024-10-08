@@ -26,7 +26,7 @@
     <feature spec="domain.system-property">
         <param name="system-property" value="org.bedework.db.pw.synch"/>
         <param name="value"
-               value="${org.bedework.site.db.synch.pw:bw}"/>
+               value="${org.bedework.site.db.pw.synch:bw}"/>
     </feature>
 
     <feature spec="subsystem.datasources">

@@ -13,6 +13,18 @@
                value="${org.bedework.site.ldap.url:ldap://localhost:10389}"/>
     </feature>
 
+    <feature spec="domain.system-property">
+        <param name="system-property" value="org.bedework.ldap.principal"/>
+        <param name="value"
+               value="${org.bedework.site.ldap.principal:uid=admin,ou=system}"/>
+    </feature>
+
+    <feature spec="domain.system-property">
+        <param name="system-property" value="org.bedework.ldap.pw"/>
+        <param name="value"
+               value="${org.bedework.site.ldap.pw:secret}"/>
+    </feature>
+
     <feature spec="subsystem.elytron.ldap-realm">
         <param name="ldap-realm" value="bedeworkRealm"/>
         <param name="dir-context" value="bedeworkLdapConnection"/>
@@ -43,8 +55,8 @@
     <feature spec="subsystem.elytron.dir-context">
         <param name="dir-context" value="bedeworkLdapConnection"/>
         <param name="url" value="${org.bedework.ldap.url}"/>
-        <param name="principal" value="&quot;uid=admin,ou=system&quot;"/>
-        <param name="credential-reference" value="{clear-text=&quot;secret&quot;}"/>
+        <param name="principal" value="&quot;${org.bedework.ldap.principal}&quot;"/>
+        <param name="credential-reference" value="{clear-text=&quot;${org.bedework.ldap.pw}&quot;}"/>
     </feature>
 
     <feature spec="subsystem.undertow">
