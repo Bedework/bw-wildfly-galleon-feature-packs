@@ -66,6 +66,11 @@
       <artifactId>bw-calendar-client-webcommon</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-calendar-dumprestore</artifactId>
+    </dependency>
+
     <!-- ================= bw-calendar-deploy ================= -->
 
     <dependency>
@@ -220,14 +225,6 @@
       <artifactId>bw-cli-toolcmd</artifactId>
     </dependency>
 
-    <!-- ============ transitive ============ -->
-
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-web</artifactId>
-      <scope>compile,runtime</scope>
-    </dependency>
-
     <!-- ============ wildfly extensions ============ -->
 
     <dependency>
@@ -349,16 +346,6 @@
                                   module="bw-calendar-xsl-eventsubmitrsrc" />
                   <addDodeployXSL package="deploy.calendar-xsl-ucalrsrc"
                                   module="bw-calendar-xsl-ucalrsrc" />
-
-                <!-- ====== not these ======
-                <touch file="${dodeploy}/bw-carddav-ear-5.0.0.ear.dodeploy" />
-                <touch file="${dodeploy}/bw-event-registration-ear-5.0.1.ear.dodeploy" />
-                <touch file="${dodeploy}/bw-note-ear-5.0.0.ear.dodeploy" />
-                <touch file="${dodeploy}/bw-self-registration-ear-5.0.0.ear.dodeploy" />
-                <touch file="${dodeploy}/bw-synch-ear-5.0.0.ear.dodeploy" />
-                <touch file="${dodeploy}/bw-timezone-server-ear-5.0.0.ear.dodeploy" />
-                <touch file="${dodeploy}/bw-xml-ear-5.0.1.ear.dodeploy" />
-                -->
                 </sequential>
               </target>
             </configuration>

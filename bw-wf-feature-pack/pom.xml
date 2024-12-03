@@ -37,6 +37,12 @@
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
+      <artifactId>bw-wf-calws-xml-feature-pack</artifactId>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.deploy</groupId>
       <artifactId>bw-wf-carddav-feature-pack</artifactId>
       <type>zip</type>
     </dependency>
