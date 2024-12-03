@@ -934,7 +934,7 @@ create index bwidx_ag_group_owner on bw_adminGroups (bw_group_owner);
 create index bwidx_ag_owner on bw_adminGroups (bw_owner);
 
     alter table bw_adminGroups 
-        add constraint ag-key unique (account);
+        add constraint ag_key unique (account);
 
     alter table bw_alarmdescriptions 
         add constraint UK_m2efnj4j34psfevyqfbyria0r unique (bw_strid);
@@ -1045,7 +1045,7 @@ create index bwidx_flt_owner on bw_filters (bw_owner);
 create index bwidx_grp_href on bw_groups (bw_principal_ref);
 
     alter table bw_groups 
-        add constraint group-key unique (bw_account);
+        add constraint group_key unique (bw_account);
 create index bwidx_loc_creator on bw_locations (bw_creator);
 create index bwidx_loc_owner on bw_locations (bw_owner);
 create index bwidx_loc_uid on bw_locations (bw_uid);
@@ -1080,7 +1080,7 @@ create index bwidx_user_href on bw_users (bw_principal_ref);
 create index bwidx_user_instance_owner on bw_users (instance_owner);
 
     alter table bw_users 
-        add constraint user-key unique (bw_account);
+        add constraint user_key unique (bw_account);
 
     alter table bw_adminGroupMembers 
         add constraint bw_agm_ag_fk 
