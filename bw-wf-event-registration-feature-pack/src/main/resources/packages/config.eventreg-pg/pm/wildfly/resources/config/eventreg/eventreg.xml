@@ -3,6 +3,7 @@
 <eventreg-properties xmlns="http://bedework.org/ns/" type="org.bedework.eventreg.service.EventregPropertiesImpl">
   <actionDelayQueueName>eventregActionDelay</actionDelayQueueName>
   <actionQueueName>eventregAction</actionQueueName>
+  <adminUsers>admin</adminUsers>
   <delayMillis>1000</delayMillis>
   <retries>10</retries>
   <bwId>localBedework</bwId>
