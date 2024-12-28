@@ -139,11 +139,6 @@
   </feature>
 
   <feature spec="subsystem.logging.logger">
-    <param name="logger" value="org.springframework"/>
-    <param name="level" value="INFO"/>
-  </feature>
-
-  <feature spec="subsystem.logging.logger">
     <param name="logger" value="org.apache.activemq"/>
     <param name="level" value="INFO"/>
   </feature>
