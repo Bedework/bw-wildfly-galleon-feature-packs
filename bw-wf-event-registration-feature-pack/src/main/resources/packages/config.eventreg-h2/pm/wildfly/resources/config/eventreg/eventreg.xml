@@ -14,6 +14,7 @@
   <dataOutPrefix>eventreg</dataOutPrefix>
   <defaultEmailDomain>bedework.org</defaultEmailDomain>
   <eventregAdminToken>ba48c4dc-ab49-4f55-b2c5-02cd450d2762</eventregAdminToken>
+  <eventregWSUrl>http://localhost:8080/eventregws/</eventregWSUrl>
   <syseventsProperties>
     <syseventsProperty>java.naming.provider.url = vm://bedework</syseventsProperty>
     <syseventsProperty>org.bedework.connection.factory.name=java:/jms/BedeworkConnectionFactory</syseventsProperty>
