@@ -9,7 +9,6 @@
   <hibernateProperties>
     <hibernateProperty>hibernate.dialect=org.hibernate.dialect.H2Dialect</hibernateProperty>
     <hibernateProperty>hibernate.connection.datasource=java:/CardDS</hibernateProperty>
-    <hibernateProperty>hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory</hibernateProperty>
     <hibernateProperty>hibernate.show_sql=false</hibernateProperty>
     <hibernateProperty>hibernate.format_sql=true</hibernateProperty>
     <hibernateProperty>hibernate.max_fetch_depth=1</hibernateProperty>
@@ -18,9 +17,10 @@
     <hibernateProperty>hibernate.jdbc.use_streams_for_binary=true</hibernateProperty>
     <hibernateProperty>hibernate.cache.region_prefix=cardb</hibernateProperty>
     <hibernateProperty>hibernate.cache.use_second_level_cache=false</hibernateProperty>
-    <hibernateProperty>hibernate.cache.use_query_cache=true</hibernateProperty>
-    <hibernateProperty>hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider</hibernateProperty>
-    <hibernateProperty>hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory</hibernateProperty>
+    <hibernateProperty>hibernate.transaction.coordinator_class=jdbc</hibernateProperty>
+    <hibernateProperty>hibernate.cache.use_query_cache=false</hibernateProperty>
+    <hibernateProperty>hibernate.javax.cache.provider=org.ehcache.jsr107.EhcacheCachingProvider</hibernateProperty>
+    <hibernateProperty>hibernate.javax.cache.uri=/ehcache.xml</hibernateProperty>
   </hibernateProperties>
   <name>user-dirHandler</name>
   <pathPrefix>/user</pathPrefix>
