@@ -4,7 +4,7 @@
   <callbackURI>http://localhost:8080/synch/</callbackURI>
   <hibernateProperties>
     <hibernateProperty>hibernate.connection.datasource=java:/SynchDS</hibernateProperty>
-    <hibernateProperty>hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory</hibernateProperty>
+    <hibernateProperty>hibernate.transaction.coordinator_class=jdbc</hibernateProperty>
     <hibernateProperty>hibernate.show_sql=false</hibernateProperty>
     <hibernateProperty>hibernate.format_sql=true</hibernateProperty>
     <hibernateProperty>hibernate.max_fetch_depth=1</hibernateProperty>
@@ -13,11 +13,11 @@
     <hibernateProperty>hibernate.jdbc.use_streams_for_binary=true</hibernateProperty>
     <hibernateProperty>hibernate.cache.region_prefix=synchdb</hibernateProperty>
     <hibernateProperty>hibernate.cache.use_second_level_cache=true</hibernateProperty>
-    <hibernateProperty>hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory</hibernateProperty>
-    <hibernateProperty>hibernate.cache.use_query_cache=true</hibernateProperty>
-    <hibernateProperty>hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider</hibernateProperty>
+    <hibernateProperty>hibernate.cache.region.factory_class=org.hibernate.cache.jcache.internal.JCacheRegionFactory</hibernateProperty>
+    <hibernateProperty>hibernate.cache.use_query_cache=false</hibernateProperty>
+    <hibernateProperty>hibernate.javax.cache.provider=org.ehcache.jsr107.EhcacheCachingProvider</hibernateProperty>
+    <hibernateProperty>hibernate.javax.cache.uri=/ehcache.xml</hibernateProperty>
     <hibernateProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQL9Dialect</hibernateProperty>
-    <hibernateProperty>net.sf.ehcache.configurationResourceName=/ehcache.xml</hibernateProperty>
   </hibernateProperties>
   <missingTargetRetries>10</missingTargetRetries>
   <name>synch-config</name>

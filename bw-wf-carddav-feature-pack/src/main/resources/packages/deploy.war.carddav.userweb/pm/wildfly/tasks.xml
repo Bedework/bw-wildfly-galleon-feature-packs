@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <tasks xmlns="urn:wildfly:wildfly-feature-pack-tasks:3.0">
-    <copy-artifact artifact="org.bedework.bw-cat:bw-category-war:::war"
+    <copy-artifact artifact="org.bedework:bw-carddav-userweb-war:::war"
                    to-location="standalone/deployments/"
                    extract="true"/>
     <copy-path src="resources/"

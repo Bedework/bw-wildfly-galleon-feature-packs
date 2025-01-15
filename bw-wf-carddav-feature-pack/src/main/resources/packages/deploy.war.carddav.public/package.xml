@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+
+<package-spec xmlns="urn:jboss:galleon:package:2.0"
+              name="deploy.war.carddav.public">
+    <dependencies>
+        <package name="org.bedework.carddav.server"/>
+    </dependencies>
+</package-spec>

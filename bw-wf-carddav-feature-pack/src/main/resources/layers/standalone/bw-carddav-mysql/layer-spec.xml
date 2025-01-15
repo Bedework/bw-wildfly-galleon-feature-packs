@@ -8,7 +8,9 @@
 
     <packages>
         <package name="config.carddav-mysql"/>
-        <package name="deploy.carddav"/>
+        <package name="deploy.war.carddav.public"/>
+        <package name="deploy.war.carddav.user"/>
+        <package name="deploy.war.carddav.userweb"/>
     </packages>
 
     <feature spec="domain.system-property">

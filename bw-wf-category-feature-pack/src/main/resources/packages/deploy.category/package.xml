@@ -2,6 +2,6 @@
 
 <package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.category">
     <dependencies>
-        <package name="org.bedework.category.ear"/>
+        <package name="org.bedework.category.web"/>
     </dependencies>
 </package-spec>

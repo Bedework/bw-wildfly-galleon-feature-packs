@@ -9,7 +9,10 @@
 
     <packages>
         <package name="config.eventreg-mysql"/>
-        <package name="deploy.eventreg"/>
+        <package name="deploy.war.eventreg"/>
+        <package name="deploy.war.eventreg.admin"/>
+        <package name="deploy.war.eventreg.common"/>
+        <package name="deploy.war.eventreg.ws"/>
     </packages>
 
     <feature spec="domain.system-property">

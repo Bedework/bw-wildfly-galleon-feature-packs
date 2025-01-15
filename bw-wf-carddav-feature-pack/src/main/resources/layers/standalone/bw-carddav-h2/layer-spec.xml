@@ -9,7 +9,9 @@
     <packages>
         <package name="config.carddav-h2"/>
         <package name="data.carddav-h2"/>
-        <package name="deploy.carddav"/>
+        <package name="deploy.war.carddav.public"/>
+        <package name="deploy.war.carddav.user"/>
+        <package name="deploy.war.carddav.userweb"/>
     </packages>
 
     <feature spec="domain.system-property">

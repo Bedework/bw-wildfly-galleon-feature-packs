@@ -13,12 +13,19 @@
   <artifactId>bw-wf-event-registration-feature-pack</artifactId>
   <packaging>pom</packaging>
 
+  <properties>
+    <resourcesDir>${project.build.directory}/generated/resources</resourcesDir>
+
+    <feature-pack.resources.directory>${project.basedir}/src/main/resources</feature-pack.resources.directory>
+  </properties>
+
   <dependencies>
     <!-- Feature pack(s) -->
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
       <artifactId>bw-wf-calws-xml-feature-pack</artifactId>
+      <version>${project.version}</version>
       <type>zip</type>
     </dependency>
 
@@ -47,14 +54,110 @@
 
     <dependency>
       <groupId>org.bedework.evreg</groupId>
-      <artifactId>bw-event-registration-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-event-registration-admin-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.evreg</groupId>
+      <artifactId>bw-event-registration-common-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.evreg</groupId>
+      <artifactId>bw-event-registration-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.evreg</groupId>
+      <artifactId>bw-event-registration-ws</artifactId>
+      <type>war</type>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-feature-pack-layer-package-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${resourcesDir}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${feature-pack.resources.directory}</directory>
+                  <includes>
+                    <include>layers/**</include>
+                    <include>packages/**</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Now create the dodeploy files -->
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>create-dodeploy-resources</id>
+            <phase>process-resources</phase>
+            <configuration>
+              <target>
+
+                <macrodef name="addDodeploy">
+                  <attribute name="package" />
+                  <attribute name="module" />
+                  <sequential>
+                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-${bw-eventreg.version}.war.dodeploy" />
+                  </sequential>
+                </macrodef>
+
+                <sequential>
+                  <addDodeploy package="deploy.war.eventreg.admin"
+                               module="bw-event-registration-admin-war" />
+                  <addDodeploy package="deploy.war.eventreg.common"
+                               module="bw-event-registration-common-war" />
+                  <addDodeploy package="deploy.war.eventreg"
+                               module="bw-event-registration-war" />
+                  <addDodeploy package="deploy.war.eventreg.ws"
+                               module="bw-event-registration-ws" />
+                </sequential>
+
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <dependencies>
+          <dependency>
+            <groupId>org.wildfly.core</groupId>
+            <artifactId>wildfly-embedded</artifactId>
+            <version>${wildfly.core.version}</version>
+          </dependency>
+
+          <dependency>
+            <groupId>org.wildfly.common</groupId>
+            <artifactId>wildfly-common</artifactId>
+            <version>${wildfly.common.version}</version>
+          </dependency>
+        </dependencies>
+
         <groupId>org.wildfly.galleon-plugins</groupId>
         <artifactId>wildfly-galleon-maven-plugin</artifactId>
 
@@ -62,9 +165,14 @@
           <execution>
             <id>galleon-pack-build</id>
 
+            <goals>
+              <goal>build-feature-pack</goal>
+            </goals>
+            <phase>prepare-package</phase>
+
             <configuration>
               <fork-embedded>false</fork-embedded>
-              <resourcesDir>${project.basedir}/src/main/resources</resourcesDir>
+              <resourcesDir>${resourcesDir}</resourcesDir>
             </configuration>
           </execution>
         </executions>

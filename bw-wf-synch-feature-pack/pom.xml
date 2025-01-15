@@ -23,6 +23,7 @@
     <dependency>
       <groupId>org.bedework.deploy</groupId>
       <artifactId>bw-wf-timezone-server-feature-pack</artifactId>
+      <version>${project.version}</version>
       <type>zip</type>
     </dependency>
 

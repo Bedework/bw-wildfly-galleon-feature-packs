@@ -310,8 +310,20 @@
 
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-carddav-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-carddav-public-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-carddav-user-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-carddav-userweb-war</artifactId>
+      <type>war</type>
     </dependency>
 
     <!-- ================= bw-category ================= -->
@@ -394,8 +406,26 @@
 
     <dependency>
       <groupId>org.bedework.evreg</groupId>
-      <artifactId>bw-event-registration-ear</artifactId>
-      <type>ear</type>
+      <artifactId>bw-event-registration-admin-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.evreg</groupId>
+      <artifactId>bw-event-registration-common-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.evreg</groupId>
+      <artifactId>bw-event-registration-war</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.evreg</groupId>
+      <artifactId>bw-event-registration-ws</artifactId>
+      <type>war</type>
     </dependency>
 
     <!-- ================= bw-hawtio ================= -->
@@ -795,11 +825,17 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
       <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-ehcache</artifactId>
+      <artifactId>hibernate-jcache</artifactId>
       <exclusions>
         <exclusion>
           <groupId>org.hibernate</groupId>
@@ -816,6 +852,17 @@
     <dependency>
       <groupId>jaxen</groupId>
       <artifactId>jaxen</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
