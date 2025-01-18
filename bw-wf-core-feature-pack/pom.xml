@@ -406,6 +406,11 @@
 
     <dependency>
       <groupId>org.bedework.evreg</groupId>
+      <artifactId>bw-event-registration-webadmin</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.evreg</groupId>
       <artifactId>bw-event-registration-admin-war</artifactId>
       <type>war</type>
     </dependency>
