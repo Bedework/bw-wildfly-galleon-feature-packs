@@ -97,11 +97,11 @@
                 </macrodef>
 
                 <sequential>
-                  <addDodeploy package="deploy.war.cardav.public"
+                  <addDodeploy package="deploy.war.carddav.public"
                                module="bw-carddav-public-war" />
-                  <addDodeploy package="deploy.war.cardav.user"
+                  <addDodeploy package="deploy.war.carddav.user"
                                module="bw-carddav-user-war" />
-                  <addDodeploy package="deploy.war.cardav.userweb"
+                  <addDodeploy package="deploy.war.carddav.userweb"
                                module="bw-carddav-userweb-war" />
                 </sequential>
 
