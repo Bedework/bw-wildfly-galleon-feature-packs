@@ -625,8 +625,8 @@
     <!-- ================ bw-util-hibernate ================ -->
 
     <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-util-hibernate</artifactId>
+      <groupId>org.bedework.database</groupId>
+      <artifactId>bw-hibernate</artifactId>
     </dependency>
 
     <!-- ================ bw-util-index ================ -->
