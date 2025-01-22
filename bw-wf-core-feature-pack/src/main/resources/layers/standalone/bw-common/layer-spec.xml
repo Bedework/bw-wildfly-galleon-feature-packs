@@ -174,8 +174,8 @@
   </feature>
 
   <feature spec="subsystem.logging.logger">
-    <param name="logger" value="net.sf.ehcache"/>
-    <param name="level" value="INFO"/>
+    <param name="logger" value="org.ehcache"/>
+    <param name="level" value="WARN"/>
   </feature>
 
   <feature spec="subsystem.logging.logger">
