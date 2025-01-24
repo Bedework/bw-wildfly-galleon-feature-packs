@@ -922,7 +922,7 @@
     <dependency>
       <groupId>org.glassfish.jaxb</groupId>
       <artifactId>txw2</artifactId>
-      <version>2.3.1</version>
+      <version>2.3.9</version>
     </dependency>
 
     <dependency>
@@ -1126,20 +1126,17 @@
             <configuration>
               <target>
                 <macrodef name="addDodeploy">
-                  <attribute name="package" />
-                  <attribute name="module" />
-                  <attribute name="version" />
+                  <attribute name="package"/>
+                  <attribute name="module"/>
+                  <attribute name="version"/>
                   <sequential>
-                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
-                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-@{version}.war.dodeploy" />
+                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/"/>
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-@{version}.war.dodeploy"/>
                   </sequential>
                 </macrodef>
 
                 <sequential>
-                  <addDodeploy package="deploy.hawtio.war"
-                               module="bw-hawtio"
-                               version="${bw-quickstart.version}"
-                  />
+                  <addDodeploy package="deploy.hawtio.war" module="bw-hawtio" version="${bw-quickstart.version}"/>
                 </sequential>
               </target>
             </configuration>
