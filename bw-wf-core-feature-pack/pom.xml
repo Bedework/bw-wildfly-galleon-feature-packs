@@ -214,12 +214,12 @@
 
     <dependency>
       <groupId>org.bedework.caleng</groupId>
-      <artifactId>bw-calendar-engine-core</artifactId>
+      <artifactId>bw-calendar-engine-core-rw-hibernate</artifactId>
     </dependency>
 
     <dependency>
       <groupId>org.bedework.caleng</groupId>
-      <artifactId>bw-calendar-engine-core-common</artifactId>
+      <artifactId>bw-calendar-engine-core-ro</artifactId>
     </dependency>
 
     <dependency>

@@ -219,12 +219,12 @@
   </feature>
 
   <feature spec="subsystem.logging.logger">
-    <param name="logger" value="org.bedework.calcore.common.indexing.BwIndexEsImpl"/>
+    <param name="logger" value="org.bedework.calcore.indexing.BwIndexEsImpl"/>
     <param name="level" value="INFO"/>
   </feature>
 
   <feature spec="subsystem.logging.logger">
-    <param name="logger" value="org.bedework.calcore.common.AccessUtil"/>
+    <param name="logger" value="org.bedework.calcore.ro.AccessUtil"/>
     <param name="level" value="INFO"/>
   </feature>
 
