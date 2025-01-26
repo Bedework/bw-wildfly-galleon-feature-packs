@@ -622,11 +622,21 @@
       <artifactId>bw-util-maven-deploy-wfmodule</artifactId>
     </dependency>
 
-    <!-- ================ bw-util-hibernate ================ -->
+    <!-- ================ bw-database ================ -->
+
+    <dependency>
+      <groupId>org.bedework.database</groupId>
+      <artifactId>bw-db</artifactId>
+    </dependency>
 
     <dependency>
       <groupId>org.bedework.database</groupId>
       <artifactId>bw-hibernate</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.database</groupId>
+      <artifactId>bw-openjpa</artifactId>
     </dependency>
 
     <!-- ================ bw-util-index ================ -->
@@ -964,6 +974,11 @@
     <dependency>
       <groupId>com.mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.openjpa</groupId>
+      <artifactId>openjpa</artifactId>
     </dependency>
 
     <dependency>
