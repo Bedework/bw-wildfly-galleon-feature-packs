@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 
 <package-spec xmlns="urn:jboss:galleon:package:2.0"
-              name="deploy.war.eventreg.ws">
+              name="deploy.war.eventreg.sar">
     <dependencies>
-        <package name="org.bedework.eventreg.wsimpl"/>
+        <package name="org.bedework.eventreg.service"/>
     </dependencies>
 </package-spec>

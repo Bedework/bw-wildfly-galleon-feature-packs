@@ -4,6 +4,7 @@
   <dependencies>
     <layer name="core-server"/>
     <layer name="elytron"/>
+    <layer name="sar"/>
     <layer name="web-server"/>
     <layer name="jms-activemq"/>
   </dependencies>
