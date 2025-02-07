@@ -80,7 +80,7 @@
   </feature>
 
   <feature spec="subsystem.logging.logger">
-    <param name="logger" value="javax.enterprise"/>
+    <param name="logger" value="jakarta.enterprise"/>
     <param name="level" value="INFO"/>
   </feature>
 

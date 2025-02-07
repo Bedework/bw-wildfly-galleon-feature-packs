@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bedework.deploy</groupId>
     <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>5.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>bw-wf-core-feature-pack</artifactId>
@@ -844,7 +844,7 @@
 
     <!-- hibernate and dependencies -->
     <dependency>
-      <groupId>org.hibernate</groupId>
+      <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-core</artifactId>
       <exclusions>
         <exclusion>
@@ -855,11 +855,11 @@
     </dependency>
 
     <dependency>
-      <groupId>org.hibernate</groupId>
+      <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-jcache</artifactId>
       <exclusions>
         <exclusion>
-          <groupId>org.hibernate</groupId>
+          <groupId>org.hibernate.orm</groupId>
           <artifactId>hibernate-core</artifactId>
         </exclusion>
       </exclusions>
@@ -872,8 +872,8 @@
     </dependency>
 
     <dependency>
-      <groupId>antlr</groupId>
-      <artifactId>antlr</artifactId>
+      <groupId>org.antlr</groupId>
+      <artifactId>antlr4</artifactId>
     </dependency>
 
     <dependency>
@@ -902,7 +902,7 @@
     <dependency>
       <groupId>org.glassfish.jaxb</groupId>
       <artifactId>jaxb-runtime</artifactId>
-      <version>2.3.1</version>
+      <version>4.0.2</version>
       <exclusions>
         <exclusion>
           <groupId>*</groupId>
@@ -933,11 +933,6 @@
       <groupId>org.glassfish.jaxb</groupId>
       <artifactId>txw2</artifactId>
       <version>2.3.1</version>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.cache</groupId>
-      <artifactId>cache-api</artifactId>
     </dependency>
 
     <dependency>

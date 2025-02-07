@@ -26,7 +26,7 @@
     <dependencies>
         <module name="org.keycloak.keycloak-adapter-spi"/>
         <module name="org.keycloak.keycloak-common"/>
-        <module name="javax.servlet.api"/>
+        <module name="jakarta.servlet.api"/>
         <module name="org.jboss.logging"/>
     </dependencies>
 </module>
