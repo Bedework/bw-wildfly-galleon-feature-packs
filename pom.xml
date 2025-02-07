@@ -9,7 +9,7 @@
 
   <groupId>org.bedework.deploy</groupId>
   <artifactId>bw-wildfly-galleon-feature-packs</artifactId>
-  <version>4.2.1</version>
+  <version>4.2.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bedework: wildfly galleon feature packs</name>
@@ -44,43 +44,43 @@
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-calendar-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-calws-xml-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-carddav-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-cas-filter-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-category-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-core-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 <!--
       <dependency>
@@ -93,50 +93,50 @@
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-keycloak-saml-filter-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-note-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-self-registration-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-synch-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-synch-xml-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-timezone-server-feature-pack</artifactId>
-        <type>zip</type>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
     </dependencies>
   </dependencyManagement>
