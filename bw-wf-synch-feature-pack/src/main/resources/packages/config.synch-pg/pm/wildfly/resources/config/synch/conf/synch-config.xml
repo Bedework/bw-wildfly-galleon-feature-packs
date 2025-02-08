@@ -2,23 +2,23 @@
 
 <synch-confinfo xmlns="http://bedework.org/ns/" type="org.bedework.synch.conf.SynchConfig">
   <callbackURI>http://localhost:8080/synch/</callbackURI>
-  <hibernateProperties>
-    <hibernateProperty>hibernate.connection.datasource=java:/SynchDS</hibernateProperty>
-    <hibernateProperty>hibernate.transaction.coordinator_class=jdbc</hibernateProperty>
-    <hibernateProperty>hibernate.show_sql=false</hibernateProperty>
-    <hibernateProperty>hibernate.format_sql=true</hibernateProperty>
-    <hibernateProperty>hibernate.max_fetch_depth=1</hibernateProperty>
-    <hibernateProperty>hibernate.jdbc.batch_size=0</hibernateProperty>
-    <hibernateProperty>hibernate.jdbc.batch_versioned_data=true</hibernateProperty>
-    <hibernateProperty>hibernate.jdbc.use_streams_for_binary=true</hibernateProperty>
-    <hibernateProperty>hibernate.cache.region_prefix=synchdb</hibernateProperty>
-    <hibernateProperty>hibernate.cache.use_second_level_cache=true</hibernateProperty>
-    <hibernateProperty>hibernate.cache.region.factory_class=org.hibernate.cache.jcache.internal.JCacheRegionFactory</hibernateProperty>
-    <hibernateProperty>hibernate.cache.use_query_cache=false</hibernateProperty>
-    <hibernateProperty>hibernate.javax.cache.provider=org.ehcache.jsr107.EhcacheCachingProvider</hibernateProperty>
-    <hibernateProperty>hibernate.javax.cache.uri=/ehcache.xml</hibernateProperty>
-    <hibernateProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQL9Dialect</hibernateProperty>
-  </hibernateProperties>
+  <ormProperties>
+    <ormProperty>hibernate.connection.datasource=java:/SynchDS</ormProperty>
+    <ormProperty>hibernate.transaction.coordinator_class=jdbc</ormProperty>
+    <ormProperty>hibernate.show_sql=false</ormProperty>
+    <ormProperty>hibernate.format_sql=true</ormProperty>
+    <ormProperty>hibernate.max_fetch_depth=1</ormProperty>
+    <ormProperty>hibernate.jdbc.batch_size=0</ormProperty>
+    <ormProperty>hibernate.jdbc.batch_versioned_data=true</ormProperty>
+    <ormProperty>hibernate.jdbc.use_streams_for_binary=true</ormProperty>
+    <ormProperty>hibernate.cache.region_prefix=synchdb</ormProperty>
+    <ormProperty>hibernate.cache.use_second_level_cache=true</ormProperty>
+    <ormProperty>hibernate.cache.region.factory_class=org.hibernate.cache.jcache.internal.JCacheRegionFactory</ormProperty>
+    <ormProperty>hibernate.cache.use_query_cache=false</ormProperty>
+    <ormProperty>hibernate.javax.cache.provider=org.ehcache.jsr107.EhcacheCachingProvider</ormProperty>
+    <ormProperty>hibernate.javax.cache.uri=/ehcache.xml</ormProperty>
+    <ormProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQL9Dialect</ormProperty>
+  </ormProperties>
   <missingTargetRetries>10</missingTargetRetries>
   <name>synch-config</name>
   <privKeys>${org.bedework.data.dir}/privkeys</privKeys>
