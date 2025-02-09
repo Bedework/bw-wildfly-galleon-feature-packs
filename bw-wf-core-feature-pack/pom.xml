@@ -879,7 +879,7 @@
     <dependency>
       <groupId>net.bytebuddy</groupId>
       <artifactId>byte-buddy</artifactId>
-      <version>1.12.9</version>
+      <version>1.15.11</version>
     </dependency>
 
     <dependency>
@@ -1136,20 +1136,17 @@
             <configuration>
               <target>
                 <macrodef name="addDodeploy">
-                  <attribute name="package" />
-                  <attribute name="module" />
-                  <attribute name="version" />
+                  <attribute name="package"/>
+                  <attribute name="module"/>
+                  <attribute name="version"/>
                   <sequential>
-                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/" />
-                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-@{version}.war.dodeploy" />
+                    <mkdir dir="${resourcesDir}/packages/@{package}/pm/wildfly/resources/"/>
+                    <touch file="${resourcesDir}/packages/@{package}/pm/wildfly/resources/@{module}-@{version}.war.dodeploy"/>
                   </sequential>
                 </macrodef>
 
                 <sequential>
-                  <addDodeploy package="deploy.hawtio.war"
-                               module="bw-hawtio"
-                               version="${bw-quickstart.version}"
-                  />
+                  <addDodeploy package="deploy.hawtio.war" module="bw-hawtio" version="${bw-quickstart.version}"/>
                 </sequential>
               </target>
             </configuration>
