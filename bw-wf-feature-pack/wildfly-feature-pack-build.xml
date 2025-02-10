@@ -16,6 +16,12 @@
 
 <build xmlns="urn:wildfly:feature-pack-build:3.2" producer="org.bedework.deploy:bw-wf-feature-pack">
     <dependencies>
+        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-core-feature-pack">
+            <name>org.bedework:bw-wf-core-feature-pack</name>
+            <default-configs inherit="false"/>
+            <packages inherit="true"/>
+        </dependency>
+
         <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-calendar-feature-pack">
             <name>org.bedework.deploy:bw-wf-calendar-feature-pack</name>
             <default-configs inherit="false"/>
@@ -82,6 +88,11 @@
             <packages inherit="true"/>
         </dependency>
     </dependencies>
+
+    <plugins>
+        <plugin artifact="org.wildfly.galleon-plugins:wildfly-galleon-plugins"/>
+    </plugins>
+
     <config name="standalone.xml" model="standalone"/>
     <generate-feature-specs>
     </generate-feature-specs>

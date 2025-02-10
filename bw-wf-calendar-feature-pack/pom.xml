@@ -237,12 +237,14 @@
       <groupId>org.wildfly.galleon-plugins</groupId>
       <artifactId>wildfly-galleon-plugins</artifactId>
       <version>${version.org.wildfly.galleon-plugins}</version>
+      <!--
       <exclusions>
         <exclusion>
           <groupId>org.jboss.galleon</groupId>
           <artifactId>*</artifactId>
         </exclusion>
       </exclusions>
+      -->
     </dependency>
 
     <!-- Third-party dependencies -->

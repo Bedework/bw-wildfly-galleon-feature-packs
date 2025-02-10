@@ -22,9 +22,13 @@
             <packages inherit="false"/>
         </dependency>
     </dependencies>
-
     <config name="standalone.xml" model="standalone"/>
     <config name="domain.xml" model="domain"/>
+
+    <plugins>
+        <plugin artifact="org.wildfly.galleon-plugins:wildfly-galleon-plugins"/>
+    </plugins>
+
     <generate-feature-specs>
     </generate-feature-specs>
 </build>

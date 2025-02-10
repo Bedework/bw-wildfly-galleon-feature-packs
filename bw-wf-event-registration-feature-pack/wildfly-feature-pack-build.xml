@@ -24,6 +24,11 @@
         </dependency>
     </dependencies>
     <config name="standalone.xml" model="standalone"/>
+
+    <plugins>
+        <plugin artifact="org.wildfly.galleon-plugins:wildfly-galleon-plugins"/>
+    </plugins>
+
     <generate-feature-specs>
     </generate-feature-specs>
 </build>

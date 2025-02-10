@@ -19,10 +19,15 @@
         <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-core-feature-pack">
             <name>org.bedework:bw-wf-core-feature-pack</name>
             <default-configs inherit="false"/>
-            <packages inherit="false"/>
+            <packages inherit="true"/>
         </dependency>
     </dependencies>
     <config name="standalone.xml" model="standalone"/>
+
+    <plugins>
+        <plugin artifact="org.wildfly.galleon-plugins:wildfly-galleon-plugins"/>
+    </plugins>
+
     <generate-feature-specs>
     </generate-feature-specs>
 </build>

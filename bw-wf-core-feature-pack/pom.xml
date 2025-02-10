@@ -724,12 +724,12 @@
       <groupId>org.bedework.wfextensions</groupId>
       <artifactId>bw-wf-calendar-subsystem</artifactId>
     </dependency>
-
+<!--
     <dependency>
       <groupId>org.bedework.wfextensions</groupId>
       <artifactId>bw-wf-undertow-handlers</artifactId>
     </dependency>
-
+-->
     <!-- Bedework: XML -->
 
     <dependency>
@@ -879,13 +879,12 @@
     <dependency>
       <groupId>net.bytebuddy</groupId>
       <artifactId>byte-buddy</artifactId>
-      <version>1.12.9</version>
+      <version>1.14.18</version>
     </dependency>
 
     <dependency>
-      <groupId>org.jboss</groupId>
+      <groupId>io.smallrye</groupId>
       <artifactId>jandex</artifactId>
-      <version>2.4.2.Final</version>
     </dependency>
 
     <dependency>
