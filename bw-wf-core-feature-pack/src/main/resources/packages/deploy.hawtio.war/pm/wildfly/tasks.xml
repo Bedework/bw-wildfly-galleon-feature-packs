@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <tasks xmlns="urn:wildfly:wildfly-feature-pack-tasks:3.0">
-    <copy-artifact artifact="org.bedework.deploy:bw-hawtio:::war"
+    <copy-artifact artifact="org.bedework.deploy:bw-hawtio4:::war"
                    to-location="standalone/deployments/"
                    extract="true"/>
     <copy-path src="resources/"

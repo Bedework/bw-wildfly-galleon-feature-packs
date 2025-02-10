@@ -80,7 +80,37 @@
   </feature>
 
   <feature spec="subsystem.logging.logger">
+    <param name="logger" value="jakarta.activation"/>
+    <param name="level" value="INFO"/>
+  </feature>
+
+  <feature spec="subsystem.logging.logger">
     <param name="logger" value="jakarta.enterprise"/>
+    <param name="level" value="INFO"/>
+  </feature>
+
+  <feature spec="subsystem.logging.logger">
+    <param name="logger" value="jakarta.xml"/>
+    <param name="level" value="INFO"/>
+  </feature>
+
+  <feature spec="subsystem.logging.logger">
+    <param name="logger" value="java.lang"/>
+    <param name="level" value="INFO"/>
+  </feature>
+
+  <feature spec="subsystem.logging.logger">
+    <param name="logger" value="jdk.event"/>
+    <param name="level" value="INFO"/>
+  </feature>
+
+  <feature spec="subsystem.logging.logger">
+    <param name="logger" value="sun.net"/>
+    <param name="level" value="INFO"/>
+  </feature>
+
+  <feature spec="subsystem.logging.logger">
+    <param name="logger" value="org.glassfish.jaxb"/>
     <param name="level" value="INFO"/>
   </feature>
 

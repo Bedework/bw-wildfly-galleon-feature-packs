@@ -442,7 +442,7 @@
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-hawtio</artifactId>
+      <artifactId>bw-hawtio4</artifactId>
       <type>war</type>
     </dependency>
 
@@ -774,8 +774,8 @@
 
     <!-- hawtio -->
     <dependency>
-      <groupId>org.checkerframework</groupId>
-      <artifactId>checker-qual</artifactId>
+      <groupId>com.github.ben-manes.caffeine</groupId>
+      <artifactId>caffeine</artifactId>
     </dependency>
 
     <dependency>
@@ -784,28 +784,23 @@
     </dependency>
 
     <dependency>
-      <groupId>org.json</groupId>
-      <artifactId>json</artifactId>
+      <groupId>org.jspecify</groupId>
+      <artifactId>jspecify</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>com.googlecode.json-simple</groupId>
-      <artifactId>json-simple</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.code.findbugs</groupId>
-      <artifactId>jsr305</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.j2objc</groupId>
-      <artifactId>j2objc-annotations</artifactId>
+      <groupId>com.nimbusds</groupId>
+      <artifactId>nimbus-jose-jwt</artifactId>
     </dependency>
 
     <dependency>
       <groupId>io.hawt</groupId>
-      <artifactId>hawtio-core</artifactId>
+      <artifactId>hawtio-connect</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.hawt</groupId>
+      <artifactId>hawtio-log</artifactId>
     </dependency>
 
     <dependency>
@@ -815,7 +810,7 @@
 
     <dependency>
       <groupId>io.hawt</groupId>
-      <artifactId>hawtio-util</artifactId>
+      <artifactId>hawtio-local-jvm-mbean</artifactId>
     </dependency>
 
     <!-- opensearch dependencies -->
@@ -998,11 +993,6 @@
     <dependency>
       <groupId>org.jolokia</groupId>
       <artifactId>jolokia-service-notif-sse</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jolokia</groupId>
-      <artifactId>jolokia-jsr160</artifactId>
     </dependency>
 
     <dependency>
@@ -1191,7 +1181,7 @@
 
                 <sequential>
                   <addDodeploy package="deploy.hawtio.war"
-                               module="bw-hawtio"
+                               module="bw-hawtio4"
                                version="${bw-quickstart.version}"
                   />
                 </sequential>
