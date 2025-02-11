@@ -13,7 +13,6 @@
   <groupsDn>ou=groups, dc=bedework, dc=org</groupsDn>
   <groupsOu>groups</groupsOu>
   <ormProperties>
-    <ormProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQL9Dialect</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/selfregDS</ormProperty>
     <ormProperty>hibernate.transaction.coordinator_class=jdbc</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>

@@ -7,7 +7,6 @@
   <confClass>org.bedework.carddav.util.DbDirHandlerConfig</confClass>
   <directory>false</directory>
   <ormProperties>
-    <ormProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQL9Dialect</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/CardDS</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>
     <ormProperty>hibernate.format_sql=true</ormProperty>

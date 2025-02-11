@@ -30,7 +30,6 @@
     <syseventsProperty>queue.queue/crawler = bedework.crawler</syseventsProperty>
   </syseventsProperties>
   <ormProperties>
-    <ormProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQL9Dialect</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/EventregDS</ormProperty>
     <ormProperty>hibernate.transaction.coordinator_class=jdbc</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>
