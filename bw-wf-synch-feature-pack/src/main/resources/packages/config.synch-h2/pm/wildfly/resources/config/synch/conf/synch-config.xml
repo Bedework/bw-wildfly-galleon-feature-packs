@@ -3,6 +3,7 @@
 <synch-confinfo xmlns="http://bedework.org/ns/" type="org.bedework.synch.conf.SynchConfig">
   <callbackURI>http://localhost:8080/synch/</callbackURI>
   <ormProperties>
+    <ormProperty>hibernate.id.db_structure_naming_strategy=legacy</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/SynchDS</ormProperty>
     <ormProperty>hibernate.transaction.coordinator_class=jdbc</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>

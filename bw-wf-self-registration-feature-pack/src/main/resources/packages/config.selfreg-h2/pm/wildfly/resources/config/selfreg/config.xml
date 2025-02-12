@@ -13,6 +13,8 @@
   <groupsDn>ou=groups, dc=bedework, dc=org</groupsDn>
   <groupsOu>groups</groupsOu>
   <ormProperties>
+    <ormProperty>hibernate.id.db_structure_naming_strategy=legacy</ormProperty>
+    <ormProperty>hibernate.id.db_structure_naming_strategy=legacy</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/selfregDS</ormProperty>
     <ormProperty>hibernate.transaction.coordinator_class=jdbc</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>

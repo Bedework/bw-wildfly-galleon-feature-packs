@@ -4,6 +4,7 @@
   <callbackURI>http://localhost:8080/notify/</callbackURI>
   <cardDAVURI>http://localhost:8080/pubcarddav/</cardDAVURI>
   <ormProperties>
+    <ormProperty>hibernate.id.db_structure_naming_strategy=legacy</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/NotifyDS</ormProperty>
     <ormProperty>hibernate.transaction.coordinator_class=jdbc</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>

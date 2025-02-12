@@ -7,6 +7,7 @@
   <confClass>org.bedework.carddav.util.DbDirHandlerConfig</confClass>
   <directory>false</directory>
   <ormProperties>
+    <ormProperty>hibernate.id.db_structure_naming_strategy=legacy</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/CardDS</ormProperty>
     <ormProperty>hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>

@@ -2,6 +2,7 @@
 
 <bwcore-dbconfig xmlns="http://bedework.org/ns/" type="org.bedework.calcore.hibernate.DbConfig">
   <ormProperties>
+    <ormProperty>hibernate.id.db_structure_naming_strategy=legacy</ormProperty>
     <ormProperty>hibernate.connection.datasource=java:/CalendarDS</ormProperty>
     <ormProperty>hibernate.transaction.coordinator_class=jdbc</ormProperty>
     <ormProperty>hibernate.show_sql=false</ormProperty>
