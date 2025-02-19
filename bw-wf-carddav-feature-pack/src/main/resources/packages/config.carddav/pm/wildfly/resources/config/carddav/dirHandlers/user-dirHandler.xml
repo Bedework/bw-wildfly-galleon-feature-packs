@@ -13,8 +13,6 @@
     <ormProperty>hibernate.show_sql=false</ormProperty>
     <ormProperty>hibernate.format_sql=true</ormProperty>
     <ormProperty>hibernate.max_fetch_depth=1</ormProperty>
-    <ormProperty>hibernate.jdbc.batch_size=0</ormProperty>
-    <ormProperty>hibernate.jdbc.batch_versioned_data=true</ormProperty>
     <ormProperty>hibernate.jdbc.use_streams_for_binary=true</ormProperty>
     <ormProperty>hibernate.cache.region_prefix=cardb</ormProperty>
     <ormProperty>hibernate.cache.use_second_level_cache=false</ormProperty>
