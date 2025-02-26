@@ -2,7 +2,7 @@
 
 <client-config xmlns="http://bedework.org/ns/" type="org.bedework.webcommon.config.ConfigCommonImpl">
   <appRoot>http://localhost:8080/approots/ucalrsrc</appRoot>
-  <appType>webuser</appType>
+  <appType>personal</appType>
   <autoCreateContacts>false</autoCreateContacts>
   <autoCreateLocations>false</autoCreateLocations>
   <autoDeleteContacts>false</autoDeleteContacts>

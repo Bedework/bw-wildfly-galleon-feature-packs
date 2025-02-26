@@ -6,7 +6,7 @@
   <allowEditAllContacts>true</allowEditAllContacts>
   <allowEditAllLocations>true</allowEditAllLocations>
   <appRoot>http://localhost:8080/approots/caladminrsrc</appRoot>
-  <appType>webadmin</appType>
+  <appType>admin</appType>
   <autoCreateContacts>false</autoCreateContacts>
   <autoCreateLocations>false</autoCreateLocations>
   <autoDeleteContacts>false</autoDeleteContacts>
