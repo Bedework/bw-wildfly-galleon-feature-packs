@@ -140,6 +140,55 @@
       <artifactId>bw-calendar-client-webcommon</artifactId>
     </dependency>
 
+    <!-- ================= bw-calendar-llc ================= -->
+
+    <dependency>
+      <groupId>org.bedework.bwllc</groupId>
+      <artifactId>bw-calendar-llc-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwllc</groupId>
+      <artifactId>bw-calendar-llc-ro</artifactId>
+    </dependency>
+
+    <!-- ================= bw-calendar-hlc ================= -->
+
+    <dependency>
+      <groupId>org.bedework.bwhlc</groupId>
+      <artifactId>bw-calendar-hlc-admin</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwhlc</groupId>
+      <artifactId>bw-calendar-hlc-admin-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwhlc</groupId>
+      <artifactId>bw-calendar-hlc-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwhlc</groupId>
+      <artifactId>bw-calendar-hlc-ro</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwhlc</groupId>
+      <artifactId>bw-calendar-hlc-ro-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwhlc</groupId>
+      <artifactId>bw-calendar-hlc-rw</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework.bwhlc</groupId>
+      <artifactId>bw-calendar-hlc-rw-api</artifactId>
+    </dependency>
+
     <!-- ============= bw-calendar-common ============= -->
 
     <dependency>
