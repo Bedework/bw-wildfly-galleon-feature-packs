@@ -31,6 +31,7 @@
     <module>bw-wf-core-feature-pack</module>
     <module>bw-wf-event-registration-feature-pack</module>
     <module>bw-wf-feature-pack</module>
+    <module>bw-wf-jquery-feature-pack</module>
     <module>bw-wf-keycloak-saml-filter-feature-pack</module>
     <module>bw-wf-note-feature-pack</module>
     <module>bw-wf-self-registration-feature-pack</module>

@@ -14,10 +14,10 @@
   ~ limitations under the License.
   -->
 
-<build xmlns="urn:wildfly:feature-pack-build:3.2" producer="org.bedework.deploy:bw-wf-carddav-feature-pack">
+<build xmlns="urn:wildfly:feature-pack-build:3.2" producer="org.bedework.deploy:bw-wf-cas-filter-feature-pack">
     <dependencies>
-        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-jquery-feature-pack">
-            <name>org.bedework:bw-wf-jquery-feature-pack</name>
+        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-core-feature-pack">
+            <name>org.bedework:bw-wf-core-feature-pack</name>
             <default-configs inherit="false"/>
             <packages inherit="true"/>
         </dependency>
