@@ -15,6 +15,7 @@
         <package name="deploy.calendar-xsl-caladminrsrc"/>
 
         <package name="deploy.war.caladmin"/>
+        <package name="deploy.images.caladmin"/>
         <package name="deploy.webservice.notifyws"/>
         <package name="deploy.webservice.synchws"/>
         <package name="deploy.webservice.ucaldav"/>
