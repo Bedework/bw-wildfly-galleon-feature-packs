@@ -3,6 +3,7 @@
             name="bw-category">
     <packages>
         <package name="config.category"/>
+        <package name="config.opensearch"/>
         <package name="deploy.category"/>
     </packages>
 </layer-spec>

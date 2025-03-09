@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<index-properties xmlns="http://bedework.org/ns/" type="org.bedework.indexer.IndexPropertiesImpl">
+  <indexerURL>${com.bedework.oschurls}</indexerURL>
+  <indexerUser>admin</indexerUser>
+  <indexerPw>admin</indexerPw>
+  <keyStore>${org.bedework.config.dir}/opensearch/config/osch.keystore</keyStore>
+  <keyStorePw>nopassword</keyStorePw>
+</index-properties>
