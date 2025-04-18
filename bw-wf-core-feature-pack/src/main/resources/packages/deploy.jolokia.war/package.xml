@@ -2,6 +2,6 @@
 
 <package-spec xmlns="urn:jboss:galleon:package:2.0" name="deploy.jolokia.war">
   <dependencies>
-    <package name="org.bedework.org.jolokia.core"/>
+    <package name="org.bedework.org.jolokia.server"/>
   </dependencies>
 </package-spec>

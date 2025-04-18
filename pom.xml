@@ -100,6 +100,13 @@
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
+        <artifactId>bw-wf-jquery-filter-feature-pack</artifactId>
+        <version>${project.version}</version>
+        <type>zip</type>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bedework.deploy</groupId>
         <artifactId>bw-wf-keycloak-saml-filter-feature-pack</artifactId>
         <version>${project.version}</version>
         <type>zip</type>
