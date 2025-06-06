@@ -26,13 +26,13 @@
  */
 
 function insertBwEvents(outputContainerID,bwObject,options) {
-  var outputContainer = document.getElementById(outputContainerID);
-  var output = "";
-  var eventlist = [];
-  var eventIndex = 0;
-  var bwListOptions;
+  const outputContainer = document.getElementById(outputContainerID);
+  let output = "";
+  const eventlist = [];
+  let eventIndex = 0;
+  let bwListOptions;
 
-  var defaults = {
+  const defaults = {
     calendarServer: '',
     calSuiteContext: '/cal',
     displayContactInDetails: true,
@@ -65,20 +65,21 @@ function insertBwEvents(outputContainerID,bwObject,options) {
     title: 'Upcoming Events',
     topicalAreasTitle: 'Topical Areas:',
     untilText: 'Ends',
+    useContentDiv: false,
     useFullImageThumbs: true,
+    useImageDiv: false,
     usePlaceholderThumb: false,
   };
 
   // merge in user-defined options
   if (typeof options == "object") {
-    for(var key in options) {
+    for (const key in options) {
       if(options.hasOwnProperty(key))
         defaults[key] = options[key];
     }
   }
 
   bwListOptions = defaults;
-
 
   // Check first to see if whe have events:
   if ((bwObject === undefined) ||
@@ -94,7 +95,8 @@ function insertBwEvents(outputContainerID,bwObject,options) {
     }
 
   } else {
-    // get events
+    let i;
+// get events
     for (i = 0; i < bwObject.bwEventList.events.length; i++) {
       eventlist[eventIndex] = i;
       eventIndex++;
@@ -115,7 +117,8 @@ function insertBwEvents(outputContainerID,bwObject,options) {
       }
       output += bwListOptions.title;
       if (bwListOptions.showCount) {
-        output += " <span class=\"bwEventsCount\">(" + bwObject.bwEventList.resultSize + ")</span>";
+        output += " <span class=\"bwEventsCount\">("
+            + bwObject.bwEventList.resultSize + ")</span>";
       }
       output += "</h3>";
     }
@@ -124,14 +127,14 @@ function insertBwEvents(outputContainerID,bwObject,options) {
     output += "<ul class=\"bwEventList\">";
 
     // Now, iterate over the events:
-    for(var i in eventlist){
+    for (i in eventlist) {
       // stop if we've reached a limit on the number of events
-      if(bwListOptions.limitList && (bwListOptions.limit === i)) {
+      if (bwListOptions.limitList && (bwListOptions.limit === i)) {
         break;
       }
 
       // provide a shorthand reference to the event:
-      var event = bwObject.bwEventList.events[eventlist[i]];
+      const event = bwObject.bwEventList.events[eventlist[i]];
 
       // create the list item:
       if (event.status === "CANCELLED") {
@@ -142,59 +145,83 @@ function insertBwEvents(outputContainerID,bwObject,options) {
         output += "<li>";
       }
 
+      if (bwListOptions.useImageDiv) {
+        output += "<div class=\"bwEventImage\">";
+      }
+
       // event thumbnail
       if (bwListOptions.displayThumbnailInList) {
-        output += formatBwThumbnail(event,bwListOptions);
+        output += formatBwThumbnail(event, bwListOptions);
       }
 
       if (bwListOptions.displayImageInList) {
-        output += formatBwImage(event,bwListOptions);
+        output += formatBwImage(event, bwListOptions);
       }
 
+      if (bwListOptions.useImageDiv) {
+        output += "</div>";
+      }
+
+      if (bwListOptions.useContentDiv) {
+        output += "<div class=\"bwEventContent\">";
+      }
       // output date and summary either byDate first or byTitle first
       if (bwListOptions.listMode === 'byDate') {
-        output += formatBwDateTime(event,bwListOptions);
-        output += "<br/>"
-        output += formatBwSummary(event,outputContainerID,i,bwListOptions);
+        output += formatBwDateTime(event, bwListOptions)
+            + "<br/>"
+            + formatBwSummary(event,outputContainerID, i, bwListOptions);
       } else {
-        output += formatBwSummary(event,outputContainerID,i,bwListOptions);
-        output += "<br/>"
-        output += formatBwDateTime(event,bwListOptions);
+        output += formatBwSummary(event,outputContainerID, i ,bwListOptions)
+            + "<br/>"
+            + formatBwDateTime(event,bwListOptions);
       }
 
       // add locations
       if (bwListOptions.displayLocationInList) {
-        output += "<div class=\"bwLoc\">";
-        output += "<span class=\"bwLocTitle\">" + bwListOptions.locationTitle + "</span> ";
-        output += event.location.address + "</div>";
+        output += "<div class=\"bwLoc\">"
+            + "<span class=\"bwLocTitle\">"
+            + bwListOptions.locationTitle
+            + "</span> "
+            + event.location.address
+            + "</div>";
       }
 
       // add full description
       if (bwListOptions.displayDescription) {
-        output += "<div class=\"bwEventDescription\"><p>";
-        output += event.description.replace(/\n/g,'<br />');
-        output += "</p></div>";
+        output += "<div class=\"bwEventDescription\"><p>"
+            + event.description.replace(/\n/g,'<br />')
+            + "</p></div>";
       }
 
       // add topical areas
       if (bwListOptions.displayTopicalAreasInList) {
-        output += "<div class=\"bwTopicalAreas\">";
-        output += "<span class=\"bwTaTitle\">" + bwListOptions.topicalAreasTitle + "</span> ";
+        output += "<div class=\"bwTopicalAreas\">"
+            + "<span class=\"bwTaTitle\">"
+            + bwListOptions.topicalAreasTitle
+            + "</span> ";
+
         // iterate over the x-properties and pull out the aliases
-        for (var j in event.xproperties) {
+        for (const j in event.xproperties) {
           if (event.xproperties[j]["X-BEDEWORK-ALIAS"] !== undefined) {
             if (event.xproperties[j]["X-BEDEWORK-ALIAS"].parameters["X-BEDEWORK-PARAM-DISPLAYNAME"] !== undefined) {
-              output +=  event.xproperties[j]["X-BEDEWORK-ALIAS"].parameters["X-BEDEWORK-PARAM-DISPLAYNAME"];
-              output += ", ";
+              output += event.xproperties[j]["X-BEDEWORK-ALIAS"]
+                  .parameters["X-BEDEWORK-PARAM-DISPLAYNAME"]
+                  + ", ";
             }
           }
         }
+
         // trim off the final ", " if we have one
         if (output.endsWith(", ")) {
-          output = output.substring(0, output.length-2);
+          output = output.substring(0, output.length - 2);
         }
         output += "</div>";
       }
+
+      if (bwListOptions.useContentDiv) {
+        output += "</div>";
+      }
+
       output += "</li>";
     }
     output += "</ul>";
@@ -204,16 +231,15 @@ function insertBwEvents(outputContainerID,bwObject,options) {
 }
 
 function formatBwThumbnail(event,bwListOptions) {
-
-  var output = "";
-  var bwEventLink = "";
-  var imgPrefix = "";
-  var imgSrc = "";
-  var imgObj;
-  var thumbObj;
+  let output = "";
+  let bwEventLink = "";
+  let imgPrefix = "";
+  let imgSrc = "";
+  let imgObj;
+  let thumbObj;
 
   // iterate over the x-properties to see if we have an image or a thumbnail
-  for (var i in event.xproperties) {
+  for (const i in event.xproperties) {
     if (event.xproperties[i]["X-BEDEWORK-THUMB-IMAGE"] !== undefined) {
       thumbObj = event.xproperties[i]["X-BEDEWORK-THUMB-IMAGE"];
     }
@@ -245,24 +271,28 @@ function formatBwThumbnail(event,bwListOptions) {
       imgSrc = bwListOptions.calendarServer + imgSrc;
     }
     bwEventLink = getBwEventLink(event,bwListOptions);
-    output += "<a href=\"" + bwEventLink + "\">";
-    output += "<img class=\"eventThumb img-responsive\" width=\"" + bwListOptions.thumbWidth + "\" src=\"" + imgSrc + "\" alt=\"" + event.summary + "\"/>";
-    output += "</a>";
+    output += "<a href=\"" + bwEventLink + "\">"
+        + "<img class=\"eventThumb img-responsive\" width=\""
+        + bwListOptions.thumbWidth
+        + "\" src=\"" + imgSrc
+        + "\" alt=\"" + event.summary
+        + "\"/>"
+        + "</a>";
   }
 
   return output;
 }
 
 function formatBwImage(event, bwListOptions) {
-  var output = "";
-  var bwEventLink = "";
-  var imgPrefix = "";
-  var imgSrc = "";
-  var imgObj;
-  var imgAlt;
+  let output = "";
+  let bwEventLink = "";
+  let imgPrefix = "";
+  let imgSrc = "";
+  let imgObj;
+  let imgAlt;
 
   // iterate over the x-properties to see if we have an image
-  for (var i in event.xproperties) {
+  for (const i in event.xproperties) {
     if (event.xproperties[i]["X-BEDEWORK-IMAGE"] !== undefined) {
       imgObj = event.xproperties[i]["X-BEDEWORK-IMAGE"];
     }
@@ -286,24 +316,25 @@ function formatBwImage(event, bwListOptions) {
       imgSrc = bwListOptions.calendarServer + imgSrc;
     }
     bwEventLink = getBwEventLink(event,bwListOptions);
-    output += "<a href=\"" + bwEventLink + "\">";
-    output += "<img class=\"eventImage img-responsive\"" +
-        " src=\"" + imgSrc + "\"";
+    let alt;
     if (imgAlt !== undefined) {
-      output += " alt=\"" + imgAlt + "\"";
+      alt = imgAlt;
     } else {
-      output += " alt=\"" + event.summary + "\"";
+      alt = event.summary;
     }
-    output += "/>";
-    output += "</a>";
+    output += "<a href=\"" + bwEventLink + "\">"
+        + "<img class=\"eventImage img-responsive\""
+        + " src=\"" + imgSrc + "\""
+        + " alt=\"" + alt + "\""
+        + "/>"
+        + "</a>";
   }
 
   return output;
 }
 
 function formatBwDateTime(event,bwListOptions) {
-  var output = "";
-  output += "<span class=\"bwDateTime\">";
+  let output = "<span class=\"bwDateTime\">";
 
   if (bwListOptions.listMode === 'byDate') {
     output +="<strong>";
@@ -313,7 +344,7 @@ function formatBwDateTime(event,bwListOptions) {
     // display the start date
     if (bwListOptions.displayDayNameInList) {
       if (bwListOptions.displayDayNameTruncated) {
-        output += event.start.dayname.substr(0,3);
+        output += event.start.dayname.substring(0,3);
       } else {
         output += event.start.dayname;
       }
@@ -326,7 +357,7 @@ function formatBwDateTime(event,bwListOptions) {
     }
   }
   if (!bwListOptions.suppressEndDateInList) {
-    if(bwListOptions.suppressStartDateInList) {
+    if (bwListOptions.suppressStartDateInList) {
       output += bwListOptions.untilText + " ";
     }
     if (bwListOptions.displayEndDateInList) {
@@ -337,7 +368,7 @@ function formatBwDateTime(event,bwListOptions) {
         }
         if (bwListOptions.displayDayNameInList) {
           if (bwListOptions.displayDayNameTruncated) {
-            output += event.end.dayname.substr(0,3);
+            output += event.end.dayname.substring(0, 3);
           } else {
             output += event.end.dayname;
           }
@@ -366,8 +397,7 @@ function formatBwDateTime(event,bwListOptions) {
 }
 
 function formatBwSummary(event, outputContainerID, i, bwListOptions) {
-  var output = "";
-  output += "<span class=\"bwSummary\">";
+  let output = "<span class=\"bwSummary\">";
 
   if (bwListOptions.listMode === 'byTitle') {
     output +="<strong>";
@@ -375,12 +405,16 @@ function formatBwSummary(event, outputContainerID, i, bwListOptions) {
 
   if (bwListOptions.displayEventDetailsInline) {
     // don't link back to the calendar - display event details in the widget
-    output += "<a href=\"javascript:showBwEvent('" +
-        outputContainerID + "'," + i + ");\">" + event.summary +
-        "</a>";
+    output += "<a href=\"javascript:showBwEvent('"
+        + outputContainerID
+        + "',"
+        + i
+        + ");\">"
+        + event.summary
+        + "</a>";
   } else {
     // link back to the calendar
-    var bwEventLink = getBwEventLink(event,bwListOptions);
+    const bwEventLink = getBwEventLink(event,bwListOptions);
 
     output += "<a href=\"" + bwEventLink + "\">" + event.summary +
         "</a>";
@@ -396,11 +430,13 @@ function formatBwSummary(event, outputContainerID, i, bwListOptions) {
 
 function getBwEventLink(event,bwListOptions) {
   // Include the urlPrefix for links back to events in the calendar.
-  var urlPrefix = bwListOptions.calendarServer + bwListOptions.calSuiteContext + "/event/eventView.do";
+  const urlPrefix = bwListOptions.calendarServer
+      + bwListOptions.calSuiteContext
+      + "/event/eventView.do";
 
   // generate the query string parameters that get us back to the
   // event in the calendar:
-  var eventQueryString = "?subid=" + event.subscriptionId
+  let eventQueryString = "?subid=" + event.subscriptionId
       + "&amp;calPath=" + event.calPath
       + "&amp;guid=" + event.guid
       + "&amp;recurrenceId=" + event.recurrenceId;
@@ -416,10 +452,10 @@ function showBwEvent(outputContainerID, eventId, displayContact,
 
   // Rudimentary options (this should be improved by turning the entire list
   // into an object with a method to get the options.  This will do for now.)
-  var displayContactInDetails = true;
-  var displayCostInDetails = true;
-  var displayTagsInDetails = true;
-  var displayTimezoneInDetails = true;
+  let displayContactInDetails = true;
+  let displayCostInDetails = true;
+  let displayTagsInDetails = true;
+  let displayTimezoneInDetails = true;
 
   if ((displayContact !== undefined) && displayContact.length) {
     displayContactInDetails = displayContact;
@@ -434,19 +470,19 @@ function showBwEvent(outputContainerID, eventId, displayContact,
     displayTimezoneInDetails = displayTimezone;
   }
 
-  var outputContainer = document.getElementById(outputContainerID);
-  var output = "";
+  const outputContainer = document.getElementById(outputContainerID);
   // provide a shorthand reference to the event:
   var event = bwObject.bwEventList.events[eventId];
 
   // create the event
-  output += "<h3 class=\"bwEventsTitle\">" + event.summary
+  let output = "<h3 class=\"bwEventsTitle\">" + event.summary
       + "</h3>"
       + "<div class=\"bwEventLogistics\">"
 
       // output date/time
       + "<div class=\"bwEventDateTime\">"
       + event.start.longdate;
+
   if (event.start.allday === 'false') {
     output += " " + event.start.time;
     if ((event.start.timezone !== event.end.timezone) &&
@@ -454,6 +490,7 @@ function showBwEvent(outputContainerID, eventId, displayContact,
       output += " " + event.start.timezone;
     }
   }
+
   if (event.start.shortdate !== event.end.shortdate) {
     output += " - "
         + event.end.longdate;
@@ -516,15 +553,17 @@ function showBwEvent(outputContainerID, eventId, displayContact,
 
   // output link
   if (event.link !== "") {
-    output += "<div class=\"bwEventLink\">"+ "See: " +
-        "<a href=\"" + event.link + "\">" + event.link + "</a>"
+    output += "<div class=\"bwEventLink\">"+ "See: "
+        + "<a href=\"" + event.link + "\">"
+        + event.link + "</a>"
         + "</div>";
   }
   output += "</div>";
 
   // create a link back to the main view
-  output += "<p class=\"bwEventsListLink\">" +
-      "<a href=\"javascript:insertBwEvents('" + outputContainerID
+  output += "<p class=\"bwEventsListLink\">"
+      + "<a href=\"javascript:insertBwEvents('"
+      + outputContainerID
       + "')\">Return</a></p>";
 
   // Send the output to the container:
