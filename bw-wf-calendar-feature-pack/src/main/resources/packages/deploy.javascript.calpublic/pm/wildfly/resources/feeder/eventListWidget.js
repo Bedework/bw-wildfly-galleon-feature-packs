@@ -25,6 +25,9 @@
 
  */
 
+/*
+ global bwObject
+ */
 function insertBwEvents(outputContainerID,bwObject,options) {
   const outputContainer = document.getElementById(outputContainerID);
   let output = "";
@@ -82,6 +85,10 @@ function insertBwEvents(outputContainerID,bwObject,options) {
   bwListOptions = defaults;
 
   // Check first to see if whe have events:
+  /*
+   * @property {object} bwObject
+   * @property {object} bwObject.bwEventList
+   */
   if ((bwObject === undefined) ||
       (bwObject.bwEventList === undefined) ||
       (bwObject.bwEventList.events === undefined) ||
@@ -93,11 +100,16 @@ function insertBwEvents(outputContainerID,bwObject,options) {
     if (bwListOptions.displayNoEventText) {
       output += "<ul class=\"bwEventList\"><li>" + bwListOptions.noEventsText + "</li></ul>";
     }
-
   } else {
     let i;
-// get events
-    for (i = 0; i < bwObject.bwEventList.events.length; i++) {
+    // get events
+    /**
+     * @param {object} bwEventList.events[]
+     * @param {string} bwEventList.resultSize
+     */
+    const bwEventList = bwObject.bwEventList;
+
+    for (i = 0; i < bwEventList.events.length; i++) {
       eventlist[eventIndex] = i;
       eventIndex++;
     }
@@ -118,7 +130,7 @@ function insertBwEvents(outputContainerID,bwObject,options) {
       output += bwListOptions.title;
       if (bwListOptions.showCount) {
         output += " <span class=\"bwEventsCount\">("
-            + bwObject.bwEventList.resultSize + ")</span>";
+            + bwEventList.resultSize + ")</span>";
       }
       output += "</h3>";
     }
@@ -134,7 +146,7 @@ function insertBwEvents(outputContainerID,bwObject,options) {
       }
 
       // provide a shorthand reference to the event:
-      const event = bwObject.bwEventList.events[eventlist[i]];
+      const event = bwEventList.events[eventlist[i]];
 
       // create the list item:
       if (event.status === "CANCELLED") {
@@ -340,11 +352,18 @@ function formatBwDateTime(event,bwListOptions) {
     output +="<strong>";
   }
 
+  /**
+   * @property {string} event.start.dayname
+   * @property {string} event.start.allday
+   * @property {string} event.start.time
+   * @property {string} event.start.longdate
+   * @property {string} event.start.shortdate
+   */
   if (!bwListOptions.suppressStartDateInList) {
     // display the start date
     if (bwListOptions.displayDayNameInList) {
       if (bwListOptions.displayDayNameTruncated) {
-        output += event.start.dayname.substring(0,3);
+        output += event.start.dayname.substring(0, 3);
       } else {
         output += event.start.dayname;
       }
@@ -428,7 +447,19 @@ function formatBwSummary(event, outputContainerID, i, bwListOptions) {
   return output;
 }
 
-function getBwEventLink(event,bwListOptions) {
+/**
+ * @param {object} event
+ * @param {object} event.contact
+ * @param {object} event.xproperties
+ * @param {string} event.subscriptionId
+ * @param {string} event.calPath
+ * @param {string} event.categories
+ * @param {string} event.guid
+ * @param {string} event.cost
+ * @param {string} event.recurrenceId
+ * @param {object} bwListOptions
+ */
+function getBwEventLink(event, bwListOptions) {
   // Include the urlPrefix for links back to events in the calendar.
   const urlPrefix = bwListOptions.calendarServer
       + bwListOptions.calSuiteContext
@@ -472,7 +503,13 @@ function showBwEvent(outputContainerID, eventId, displayContact,
 
   const outputContainer = document.getElementById(outputContainerID);
   // provide a shorthand reference to the event:
-  var event = bwObject.bwEventList.events[eventId];
+  /**
+   * @property {object} event
+   * @property {string} event.summary
+   * @property {object} event.location
+   * @property {string} event.location.link
+   */
+  const event = bwObject.bwEventList.events[eventId];
 
   // create the event
   let output = "<h3 class=\"bwEventsTitle\">" + event.summary
