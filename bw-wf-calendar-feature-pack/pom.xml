@@ -79,7 +79,7 @@
       <artifactId>bw-calendar-dumprestore</artifactId>
     </dependency>
 
-    <!-- ================= bw-calendar-llc ================= -->
+    <!-- ================= bw-calendar-llc =================
 
     <dependency>
       <groupId>org.bedework.bwllc</groupId>
@@ -90,8 +90,8 @@
       <groupId>org.bedework.bwllc</groupId>
       <artifactId>bw-calendar-llc-ro</artifactId>
     </dependency>
-
-    <!-- ================= bw-calendar-hlc ================= -->
+ -->
+    <!-- ================= bw-calendar-hlc =================
 
     <dependency>
       <groupId>org.bedework.bwhlc</groupId>
@@ -127,7 +127,7 @@
       <groupId>org.bedework.bwhlc</groupId>
       <artifactId>bw-calendar-hlc-rw-api</artifactId>
     </dependency>
-
+ -->
     <!-- ================= bw-calendar-deploy ================= -->
 
     <dependency>
