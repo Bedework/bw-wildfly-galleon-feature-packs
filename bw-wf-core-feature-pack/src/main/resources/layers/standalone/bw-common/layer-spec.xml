@@ -7,6 +7,7 @@
     <layer name="sar"/>
     <layer name="web-server"/>
     <layer name="jms-activemq"/>
+    <layer name="add-jquery"/>
   </dependencies>
 
   <packages>
