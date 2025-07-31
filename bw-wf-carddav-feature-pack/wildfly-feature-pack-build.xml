@@ -22,8 +22,8 @@
             <packages inherit="true"/>
         </dependency>
 
-        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-jquery-feature-pack">
-            <name>org.bedework:bw-wf-jquery-feature-pack</name>
+        <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-javascript-feature-pack">
+            <name>org.bedework:bw-wf-javascript-feature-pack</name>
             <default-configs inherit="false"/>
             <packages inherit="true"/>
         </dependency>
