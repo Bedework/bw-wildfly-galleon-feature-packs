@@ -25,7 +25,7 @@
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-wf-jquery-feature-pack</artifactId>
+      <artifactId>bw-wf-javascript-feature-pack</artifactId>
       <version>${project.version}</version>
       <type>zip</type>
     </dependency>
@@ -144,7 +144,7 @@
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-calendar-publicws</artifactId>
+      <artifactId>bw-calendar-pubcalws</artifactId>
       <type>war</type>
     </dependency>
 
@@ -162,7 +162,7 @@
 
     <dependency>
       <groupId>org.bedework.deploy</groupId>
-      <artifactId>bw-calendar-userws</artifactId>
+      <artifactId>bw-calendar-ucalws</artifactId>
       <type>war</type>
     </dependency>
 

@@ -21,7 +21,7 @@
 
  NOTE: No jQuery or other library dependencies should be used in this file
  because it is used both by the public Bedework web client and
- by javascript widgets embedded on other sites. It should stand alone.
+ by JavaScript widgets embedded on other sites. It should stand alone.
 
  */
 

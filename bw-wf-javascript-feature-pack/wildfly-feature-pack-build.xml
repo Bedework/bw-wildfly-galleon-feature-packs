@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<build xmlns="urn:wildfly:feature-pack-build:3.2" producer="org.bedework.deploy:bw-wf-core-feature-pack">
+<build xmlns="urn:wildfly:feature-pack-build:3.2" producer="org.bedework.deploy:bw-wf-javascript-feature-pack">
     <dependencies>
         <dependency group-id="org.wildfly" artifact-id="wildfly-ee-galleon-pack">
             <name>org.wildfly:wildfly-ee-galleon-pack</name>
@@ -22,20 +22,11 @@
             <packages inherit="false"/>
         </dependency>
     </dependencies>
-
-    <dependency group-id="org.bedework.deploy" artifact-id="bw-wf-javascript-feature-pack">
-        <name>org.bedework:bw-wf-javascript-feature-pack</name>
-        <default-configs inherit="false"/>
-        <packages inherit="true"/>
-    </dependency>
-
     <config name="standalone.xml" model="standalone"/>
-    <config name="domain.xml" model="domain"/>
 
     <plugins>
         <plugin artifact="org.wildfly.galleon-plugins:wildfly-galleon-plugins"/>
     </plugins>
-
     <generate-feature-specs>
     </generate-feature-specs>
 </build>

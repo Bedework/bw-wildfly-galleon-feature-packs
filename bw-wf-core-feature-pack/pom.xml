@@ -416,24 +416,17 @@
 
     <dependency>
       <groupId>org.bedework</groupId>
+      <artifactId>bw-cli-jolokia</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
       <artifactId>bw-cli-shell</artifactId>
     </dependency>
 
     <dependency>
       <groupId>org.bedework</groupId>
       <artifactId>bw-cli-toolcmd</artifactId>
-    </dependency>
-
-    <!-- ============ bw-cliutil ============ -->
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-util-cli</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bedework</groupId>
-      <artifactId>bw-util-jolokia</artifactId>
     </dependency>
 
     <!-- ============ bw-event-registration ============ -->

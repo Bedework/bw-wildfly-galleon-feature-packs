@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bedework</groupId>
     <artifactId>bedework-parent</artifactId>
-    <version>215</version>
+    <version>222-SNAPSHOT</version>
   </parent>
 
   <groupId>org.bedework.deploy</groupId>
@@ -31,7 +31,7 @@
     <module>bw-wf-core-feature-pack</module>
     <module>bw-wf-event-registration-feature-pack</module>
     <module>bw-wf-feature-pack</module>
-    <module>bw-wf-jquery-feature-pack</module>
+    <module>bw-wf-javascript-feature-pack</module>
     <module>bw-wf-keycloak-saml-filter-feature-pack</module>
     <module>bw-wf-note-feature-pack</module>
     <module>bw-wf-self-registration-feature-pack</module>
@@ -100,7 +100,7 @@
 
       <dependency>
         <groupId>org.bedework.deploy</groupId>
-        <artifactId>bw-wf-jquery-filter-feature-pack</artifactId>
+        <artifactId>bw-wf-javascript-filter-feature-pack</artifactId>
         <version>${project.version}</version>
         <type>zip</type>
       </dependency>
