@@ -1,0 +1,5 @@
+[[calendar]]
+== Calendar Feature pack
+This module provides a feature pack which installs the calendar subsystems
+
+This documentation is largely a placeholder. Much of the documentation relating to feature packs and layers should be mnoved here from the main bedework guide and a reference made.
