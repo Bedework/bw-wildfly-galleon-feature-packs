@@ -15,6 +15,6 @@
         <package name="deploy.war.cal"/>
         <package name="deploy.war.feeder"/>
         <package name="deploy.webservice.pubcaldav"/>
-        <package name="deploy.webservice.publicws"/>
+        <package name="deploy.webservice.pubcalws"/>
     </packages>
 </layer-spec>

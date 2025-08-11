@@ -19,6 +19,6 @@
         <package name="deploy.webservice.notifyws"/>
         <package name="deploy.webservice.synchws"/>
         <package name="deploy.webservice.ucaldav"/>
-        <package name="deploy.webservice.userws"/>
+        <package name="deploy.webservice.ucalws"/>
     </packages>
 </layer-spec>

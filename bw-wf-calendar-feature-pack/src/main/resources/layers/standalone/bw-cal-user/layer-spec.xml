@@ -14,8 +14,8 @@
         <package name="deploy.images.ucal"/>
         <package name="deploy.war.usercal"/>
         <package name="deploy.webservice.pubcaldav"/>
-        <package name="deploy.webservice.publicws"/>
+        <package name="deploy.webservice.pubcalws"/>
         <package name="deploy.webservice.ucaldav"/>
-        <package name="deploy.webservice.userws"/>
+        <package name="deploy.webservice.ucalws"/>
     </packages>
 </layer-spec>

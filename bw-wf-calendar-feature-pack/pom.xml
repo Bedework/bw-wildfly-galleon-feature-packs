@@ -473,14 +473,14 @@
                                module="bw-calendar-notifyws" />
                   <addDodeploy package="deploy.webservice.pubcaldav"
                                module="bw-calendar-pubcaldav" />
-                  <addDodeploy package="deploy.webservice.publicws"
-                               module="bw-calendar-publicws" />
+                  <addDodeploy package="deploy.webservice.pubcalws"
+                               module="bw-calendar-pubcalws" />
                   <addDodeploy package="deploy.webservice.synchws"
                                module="bw-calendar-synchws" />
                   <addDodeploy package="deploy.webservice.ucaldav"
                                module="bw-calendar-ucaldav" />
-                  <addDodeploy package="deploy.webservice.userws"
-                               module="bw-calendar-userws" />
+                  <addDodeploy package="deploy.webservice.ucalws"
+                               module="bw-calendar-ucalws" />
 
                   <addDodeploy package="deploy.war.cal"
                                module="bw-webclient-cal" />
