@@ -10,6 +10,10 @@
         <activeByDefault>true</activeByDefault>
       </activation>
 
+      <properties>
+        <maven.executable>/usr/local/bin/mvn</maven.executable>
+      </properties>
+
       <repositories>
         <repository>
           <releases>
