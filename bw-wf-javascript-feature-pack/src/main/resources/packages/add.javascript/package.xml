@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
 
 <package-spec xmlns="urn:jboss:galleon:package:2.0"
-              name="add-javascript">
+              name="add.javascript">
 </package-spec>
