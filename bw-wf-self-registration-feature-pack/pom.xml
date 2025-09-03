@@ -11,6 +11,7 @@
   </parent>
 
   <artifactId>bw-wf-self-registration-feature-pack</artifactId>
+  <name>Bedework: Self registration feature pack</name>
   <packaging>pom</packaging>
 
   <properties>

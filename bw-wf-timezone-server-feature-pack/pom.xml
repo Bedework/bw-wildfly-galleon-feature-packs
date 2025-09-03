@@ -11,6 +11,7 @@
   </parent>
 
   <artifactId>bw-wf-timezone-server-feature-pack</artifactId>
+  <name>Bedework: Timezone server feature pack</name>
   <packaging>pom</packaging>
 
   <properties>
