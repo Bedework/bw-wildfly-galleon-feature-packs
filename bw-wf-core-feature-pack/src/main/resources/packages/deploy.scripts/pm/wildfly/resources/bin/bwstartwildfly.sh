@@ -174,9 +174,6 @@ BW_CONF_DIR_DEF="-Dorg.bedework.config.dir=$BW_CONF_DIR/"
 
 # Opensearch home
 
-export OSCH_HOME="$BW_DATA_DIR/opensearch"
-JAVA_OPTS="$JAVA_OPTS -Dosch.path.home=$OSCH_HOME"
-
 JAVA_OPTS="$JAVA_OPTS -Xms$heap -Xmx$heap -Xss$stack"
 
 # Put all the temp stuff inside the jboss temp
