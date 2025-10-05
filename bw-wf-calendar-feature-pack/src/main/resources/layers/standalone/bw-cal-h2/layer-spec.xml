@@ -9,6 +9,7 @@
 
     <packages>
         <package name="data.calendar-h2"/>
+        <package name="data.dumprestore"/>
     </packages>
 
     <feature spec="domain.system-property">

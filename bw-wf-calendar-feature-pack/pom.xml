@@ -76,7 +76,17 @@
 
     <dependency>
       <groupId>org.bedework</groupId>
-      <artifactId>bw-calendar-dumprestore</artifactId>
+      <artifactId>bw-calendar-dumprestore-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-calendar-dumprestore-sar</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-calendar-dumprestore-service</artifactId>
     </dependency>
 
     <!-- ================= bw-calendar-llc =================

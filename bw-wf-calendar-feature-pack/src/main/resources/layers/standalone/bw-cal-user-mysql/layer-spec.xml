@@ -8,5 +8,6 @@
 
     <packages>
         <package name="config.cal-mysql"/>
+        <package name="config.dumprestore"/>
     </packages>
 </layer-spec>

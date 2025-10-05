@@ -8,5 +8,6 @@
 
     <packages>
         <package name="config.cal-h2"/>
+        <package name="config.dumprestore"/>
     </packages>
 </layer-spec>

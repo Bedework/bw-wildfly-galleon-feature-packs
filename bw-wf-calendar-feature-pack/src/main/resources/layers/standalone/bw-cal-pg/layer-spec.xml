@@ -9,6 +9,7 @@
 
     <packages>
         <package name="data.calendar-pg"/>
+        <package name="data.dumprestore"/>
     </packages>
 
     <feature spec="domain.system-property">

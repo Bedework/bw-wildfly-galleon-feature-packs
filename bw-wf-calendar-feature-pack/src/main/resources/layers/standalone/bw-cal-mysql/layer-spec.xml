@@ -9,6 +9,7 @@
 
     <packages>
         <package name="data.calendar-mysql"/>
+        <package name="data.dumprestore"/>
     </packages>
 
     <feature spec="domain.system-property">
