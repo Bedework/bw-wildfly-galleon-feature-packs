@@ -732,6 +732,11 @@
       <artifactId>bw-util-servlet-filters</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.bedework</groupId>
+      <artifactId>bw-util-struts2</artifactId>
+    </dependency>
+
     <!-- ================ bw-util-security ================ -->
 
     <dependency>
